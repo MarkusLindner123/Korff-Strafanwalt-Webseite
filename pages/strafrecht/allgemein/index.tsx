@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 // Globale Komponenten
 import Header from "../../../components/Header/Header";
@@ -14,25 +15,26 @@ const AllgemeinesStrafrechtPage = () => {
   return (
     <>
       <Head>
-        <title>Allgemeines Strafrecht | Kanzlei</title>
+        <title>Allgemeines Strafrecht | Kanzlei Korff</title>
         <meta
           name="description"
           content="Verteidigung bei 'Alltagskriminalität': Diebstahl, Betrug, Nötigung und anderen Delikten des allgemeinen Strafrechts."
         />
       </Head>
 
+      {/* Die Hauptfarbe der Palette wird für den Header verwendet */}
       <Header />
 
-      {/* PageHeader mit neuem Untertitel */}
+      {/* PageHeader mit Textfarbe der Hauptfarbe */}
       <PageHeader title="Allgemeines Strafrecht" />
 
-      {/* Hier wird die Layout-Komponente genutzt, um das Zwei-Spalten-Layout zu erstellen */}
       <StrafrechtSubPageLayout>
-        {/*
-          Der Inhalt in diesem Bereich wird automatisch in die rechte Spalte
-          der Layout-Komponente eingefügt.
-        */}
         <div className="prose max-w-none text-lg text-gray-700">
+          <p className="font-semibold text-gray-900 mb-6">
+            Wir verteidigen Sie umfassend in allen Bereichen der sogenannten
+            'Alltagskriminalität', von Verkehrsdelikten über Diebstahl bis hin
+            zu Körperverletzungsdelikten.
+          </p>
           <p>
             Unter dem Begriff **Allgemeines Strafrecht** wird gemeinhin die
             „Alltagskriminalität“ verstanden. So werden etwa Verkehrsdelikte,
@@ -49,7 +51,7 @@ const AllgemeinesStrafrechtPage = () => {
             erfolgreiche Verteidigung.
           </p>
 
-          <h3 className="mt-8 text-xl font-bold text-gray-800">
+          <h3 className="mt-8 text-xl font-bold text-korff-primary">
             Folgende Vergehen und Verbrechen werden vornehmlich unter den
             Begriff des allgemeinen Strafrechts gefasst:
           </h3>
@@ -92,15 +94,22 @@ const AllgemeinesStrafrechtPage = () => {
           </ul>
 
           <p className="mt-8 font-semibold">
-            Sollte Ihnen ein strafrechtlicher Vorwurf gemacht werden, sollten
-            Sie möglichst frühzeitig mit uns Kontakt aufnehmen. Schon im Vorfeld
-            werden Sie über den wahrscheinlichen Verlauf des Verfahrens
-            aufgeklärt und wir entwickeln eine für Sie individuelle
-            Verteidigungsstrategie.
+            Die Kenntnis der jeweiligen Mengen nach dem BtMG ist ein
+            unerlässlicher Bestandteil einer erfolgreichen Verteidigung. Nehmen
+            Sie daher frühzeitig{" "}
+            <Link
+              href="/kontakt"
+              className="text-korff-primary hover:text-korff-secondary transition-colors"
+            >
+              Kontakt
+            </Link>{" "}
+            mit uns auf, um von Anfang an auf das Ermittlungsverfahren Einfluss
+            nehmen zu können.
           </p>
         </div>
       </StrafrechtSubPageLayout>
 
+      {/* ContactSection mit Hintergrundfarbe und Buttonfarbe aus der Palette */}
       <ContactSection />
       <Footer />
     </>

@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --korff-primary: #1e3a8a;
+  --korff-secondary: #fcd34d;
+  --korff-background: #f3f4f6;
+  --korff-text: #1f2937;
+}
+
+/*
+  Setzen der Schriftart global über die CSS-Variable
+  Die Schriftart wird nun zentral über _app.tsx geladen.
+*/
+body {
+  color: var(--korff-text);
+  background-color: var(--korff-background);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
