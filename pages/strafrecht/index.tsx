@@ -27,7 +27,7 @@ const StrafrechtPage = () => {
       <Header />
 
       {/* Page Header mit Titel und Untertitel */}
-      <PageHeader title="Fachanwälte für Strafrecht" />
+      <PageHeader title="page.strafrecht.title" />
 
       {/* Hauptinhalt */}
       <main className="container mx-auto px-4 py-12">

@@ -2,9 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
+import { useI18n } from "../../contexts/I18nContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useI18n();
 
   return (
     <footer className="bg-gray-800 text-gray-300 py-6">
@@ -13,29 +15,29 @@ const Footer = () => {
         <nav className="flex space-x-4 mb-4 md:mb-0">
           <Link href="/kontakt">
             <div className="hover:text-white transition-colors cursor-pointer">
-              Kontakt
+              {t("footer.links.kontakt")}
             </div>
           </Link>
           <Link href="/#anfahrt">
             <div className="hover:text-white transition-colors cursor-pointer">
-              Anfahrt
+              {t("footer.links.anfahrt")}
             </div>
           </Link>
           <Link href="/datenschutz">
             <div className="hover:text-white transition-colors cursor-pointer">
-              Datenschutz
+              {t("footer.links.datenschutz")}
             </div>
           </Link>
           <Link href="/impressum">
             <div className="hover:text-white transition-colors cursor-pointer">
-              Impressum
+              {t("footer.links.impressum")}
             </div>
           </Link>
         </nav>
 
         {/* Urheberrecht */}
         <div className="text-center">
-          <p>&copy; {currentYear} | Daniel Korff - Kanzlei für Strafrecht</p>
+          <p>&copy; {currentYear} {t("footer.copyright")}</p>
         </div>
       </div>
     </footer>

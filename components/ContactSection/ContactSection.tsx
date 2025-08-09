@@ -1,9 +1,10 @@
 // components/contact-section/ContactSection.tsx
 
 import React from "react";
-import Link from "next/link";
+import { useI18n } from "../../contexts/I18nContext";
 
 const ContactSection = () => {
+  const { t } = useI18n();
   return (
     <section id="kontakt-formular" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
@@ -12,18 +13,18 @@ const ContactSection = () => {
             {/* Linke Spalte: Kontaktdaten */}
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                Unsere Kontaktdaten
+                {t("contact.heading")}
               </h2>
               <div className="text-gray-600 space-y-4 text-lg">
                 <p>
-                  Kanzlei Korff
+                  {t("contact.address.name")}
                   <br />
-                  Beispielstraße 123
+                  {t("contact.address.street")}
                   <br />
-                  10115 Berlin
+                  {t("contact.address.city")}
                 </p>
                 <p>
-                  <span className="font-semibold">Telefon:</span>{" "}
+                  <span className="font-semibold">{t("contact.labels.phone")}</span>{" "}
                   <a
                     href="tel:+493085479867"
                     className="text-blue-600 hover:underline"
@@ -31,10 +32,10 @@ const ContactSection = () => {
                     +49 30 85479867
                   </a>
                   <br />
-                  <span className="font-semibold">Telefax:</span> +49 30
+                  <span className="font-semibold">{t("contact.labels.fax")}</span> +49 30
                   85479868
                   <br />
-                  <span className="font-semibold">Mail:</span>{" "}
+                  <span className="font-semibold">{t("contact.labels.mail")}</span>{" "}
                   <a
                     href="mailto:info@kanzlei-korff.de"
                     className="text-blue-600 hover:underline"
@@ -44,15 +45,15 @@ const ContactSection = () => {
                 </p>
                 <p>
                   <span className="font-semibold">
-                    Anfahrt mit öffentlichen Verkehrsmitteln:
+                    {t("contact.labels.byTransit")}
                   </span>
                   <br />
-                  U-Bahn-Haltestelle ... (S-Bahn, U-Bahn)
+                  {t("contact.transitHint")}
                 </p>
                 <p>
-                  <span className="font-semibold">Anfahrt mit dem PKW:</span>
+                  <span className="font-semibold">{t("contact.labels.byCar")}</span>
                   <br />
-                  Parkmöglichkeiten vorhanden auf öffentlichen Parkplätzen ...
+                  {t("contact.carHint")}
                 </p>
               </div>
             </div>
@@ -60,7 +61,7 @@ const ContactSection = () => {
             {/* Rechte Spalte: Kontaktformular */}
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                Kontaktieren Sie uns
+                {t("contact.form.heading")}
               </h2>
               <form
                 action="https://formspree.io/f/your-form-id"
@@ -72,7 +73,7 @@ const ContactSection = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Name
+                    {t("contact.form.name")}
                   </label>
                   <input
                     type="text"
@@ -88,7 +89,7 @@ const ContactSection = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    E-Mail
+                    {t("contact.form.email")}
                   </label>
                   <input
                     type="email"
@@ -105,7 +106,7 @@ const ContactSection = () => {
                     htmlFor="phone"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Telefon
+                    {t("contact.form.phone")}
                   </label>
                   <input
                     type="tel"
@@ -120,7 +121,7 @@ const ContactSection = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Nachricht
+                    {t("contact.form.message")}
                   </label>
                   <textarea
                     id="message"
@@ -136,7 +137,7 @@ const ContactSection = () => {
                     type="submit"
                     className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                   >
-                    Senden
+                    {t("contact.form.send")}
                   </button>
                 </div>
               </form>

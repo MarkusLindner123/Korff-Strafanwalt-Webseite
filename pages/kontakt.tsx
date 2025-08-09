@@ -7,7 +7,7 @@ import PageHeader from "../components/PageHeader/PageHeader";
 const Kontakt = () => {
   return (
     <Layout>
-      <PageHeader title="Kontakt & Notruf" />
+      <PageHeader title="page.kontakt.title" />
       <ContactSection />
     </Layout>
   );

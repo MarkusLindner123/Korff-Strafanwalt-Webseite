@@ -8,7 +8,7 @@ const Kanzlei = () => {
   return (
     <Layout>
       {/* Die statische Hero-Sektion wird durch die Komponente ersetzt */}
-      <PageHeader title="Die Kanzlei Korff in Berlin" />
+      <PageHeader title="page.kanzlei.title" />
 
       {/* Hauptinhalt bleibt unverändert */}
       <div className="container mx-auto px-4 py-16">

@@ -1,9 +1,10 @@
 // components/HeroSection/HeroSection.tsx
 
 import React from "react";
-import Link from "next/link";
+import { useI18n } from "../../../contexts/I18nContext";
 
 const HeroSection = () => {
+  const { t } = useI18n();
   return (
     <>
       {/* Hero-Sektion mit Hintergrundbild und Text */}
@@ -17,10 +18,10 @@ const HeroSection = () => {
         {/* Inhalt der Hero-Sektion */}
         <div className="relative z-10 text-white p-8">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Ihre kompetenten Strafverteidiger in Berlin
+            {t("hero.headline")}
           </h1>
           <p className="mt-4 text-xl md:text-2xl font-light">
-            Wir stehen Ihnen in jeder Situation zur Seite.
+            {t("hero.subheadline")}
           </p>
         </div>
       </div>
@@ -37,7 +38,7 @@ const HeroSection = () => {
             />
             <div className="flex flex-col items-center md:items-start">
               {/* Die Überschrift ist jetzt kleiner (text-sm) */}
-              <h3 className="text-sm font-normal">Termine vereinbaren</h3>
+              <h3 className="text-sm font-normal">{t("hero.banner1.title")}</h3>
               {/* Die Telefonnummer ist größer (text-2xl) */}
               <a
                 href="tel:+493085479867"
@@ -57,7 +58,7 @@ const HeroSection = () => {
             />
             <div className="flex flex-col items-center md:items-start">
               {/* Die Überschrift ist jetzt kleiner (text-sm) */}
-              <h3 className="text-sm font-normal">E-Mail senden</h3>
+              <h3 className="text-sm font-normal">{t("hero.banner2.title")}</h3>
               {/* Die E-Mail-Adresse ist größer (text-lg) */}
               <a
                 href="mailto:info@kanzlei.de"
@@ -77,9 +78,9 @@ const HeroSection = () => {
             />
             <div className="flex flex-col items-center md:items-start">
               {/* Die Überschrift ist jetzt kleiner (text-sm) */}
-              <h3 className="text-sm font-normal">Unsere Öffnungszeiten</h3>
+              <h3 className="text-sm font-normal">{t("hero.banner3.title")}</h3>
               {/* Die Öffnungszeiten sind größer (text-lg) */}
-              <p className="mt-1 text-lg font-bold">MO-FR: 09-17 Uhr</p>
+              <p className="mt-1 text-lg font-bold">{t("hero.banner3.hours")}</p>
             </div>
           </div>
         </div>

@@ -1,15 +1,17 @@
 // components/sections/MapSection/MapSection.tsx
 
 import React from "react";
+import { useI18n } from "../../../contexts/I18nContext";
 
 const MapSection = () => {
+  const { t } = useI18n();
   return (
     // Die id="anfahrt" wird hier zum äußeren Element hinzugefügt,
     // damit der Footer-Link dorthin navigieren kann.
     <section id="anfahrt" className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
-          Anfahrt
+          {t("map.heading")}
         </h2>
         {/* Sektion für die Karte */}
         <div className="bg-white p-6 rounded-lg shadow-lg overflow-hidden">
