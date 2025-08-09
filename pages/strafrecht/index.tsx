@@ -31,7 +31,7 @@ const StrafrechtPage = () => {
 
       {/* Hauptinhalt */}
       <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto text-lg text-gray-600 space-y-6">
+        <div className="max-w-4xl mx-auto text-lg text-korff-text space-y-6">
           <p>
             Wir schöpfen immer alle Möglichkeiten aus, um eine öffentliche
             Gerichtsverhandlung zu vermeiden und wenn irgend möglich bereits im
@@ -54,7 +54,7 @@ const StrafrechtPage = () => {
             Ein besonderer Schwerpunkt unserer Kanzlei ist die
             **Rechtsmittelverteidigung**.
           </p>
-          <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-4">
+          <h2 className="text-2xl font-bold text-korff-primary mt-12 mb-4">
             Wir verteidigen Sie erfolgreich u. a. in folgenden Fällen:
           </h2>
           {/* Liste der Fachgebiete */}
@@ -62,10 +62,10 @@ const StrafrechtPage = () => {
             <li>
               <Link href="/strafrecht/allgemein">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Allgemeines Strafrecht
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-korff-text">
                     (Diebstahl, Betrug, Nötigung, Körperverletzung, etc.)
                   </p>
                 </div>
@@ -74,10 +74,10 @@ const StrafrechtPage = () => {
             <li>
               <Link href="/strafrecht/betaeubungsmittel">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Betäubungsmittelstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-korff-text">
                     (Drogenbesitz, Drogenhandel, BtMG)
                   </p>
                 </div>
@@ -86,10 +86,10 @@ const StrafrechtPage = () => {
             <li>
               <Link href="/strafrecht/wirtschaft">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Wirtschaftsstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-korff-text">
                     (Insolvenzverschleppung, Untreue, Bankrott, Schwarzarbeit)
                   </p>
                 </div>
@@ -98,10 +98,10 @@ const StrafrechtPage = () => {
             <li>
               <Link href="/strafrecht/verkehr">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Verkehrsstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-korff-text">
                     (Fahren ohne Fahrerlaubnis, Trunkenheitsfahrt, Unfallflucht)
                   </p>
                 </div>
@@ -110,32 +110,30 @@ const StrafrechtPage = () => {
             <li>
               <Link href="/strafrecht/sexual">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Sexualstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500">
-                    (Sexueller Missbrauch, Vergewaltigung, Kinderpornographie)
-                  </p>
+                  <p className="text-sm text-korff-text"></p>
                 </div>
               </Link>
             </li>
             <li>
               <Link href="/strafrecht/jugend">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Jugendstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500"></p>
+                  <p className="text-sm text-korff-text"></p>
                 </div>
               </Link>
             </li>
             <li>
               <Link href="/strafrecht/steuer">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Steuerstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-korff-text">
                     (Steuerhinterziehung, Steuerverkürzung, Selbstanzeige)
                   </p>
                 </div>
@@ -144,10 +142,10 @@ const StrafrechtPage = () => {
             <li>
               <Link href="/strafrecht/medizin">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Medizin- / Arztstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-korff-text">
                     (Fahrlässige Tötung, fahrlässige Körperverletzung wg.
                     „Kunstfehler“, Abrechnungsbetrug)
                   </p>
@@ -157,20 +155,20 @@ const StrafrechtPage = () => {
             <li>
               <Link href="/strafrecht/beamten">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Beamtenstrafrecht / Soldatenstrafrecht
                   </h3>
-                  <p className="text-sm text-gray-500"></p>
+                  <p className="text-sm text-korff-text"></p>
                 </div>
               </Link>
             </li>
             <li>
               <Link href="/strafrecht/rechtsmittel">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-red-600">
+                  <h3 className="text-xl font-semibold text-korff-primary">
                     Rechtsmittelverteidigung
                   </h3>
-                  <p className="text-sm text-gray-500"></p>
+                  <p className="text-sm text-korff-text"></p>
                 </div>
               </Link>
             </li>

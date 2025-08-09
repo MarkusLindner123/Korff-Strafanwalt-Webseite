@@ -5,16 +5,16 @@ import Link from "next/link";
 
 const ContactSection = () => {
   return (
-    <section id="kontakt-formular" className="py-20 bg-gray-100">
+    <section id="kontakt-formular" className="py-20 bg-korff-background">
       <div className="container mx-auto px-4">
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <div className="flex flex-col md:flex-row gap-12">
             {/* Linke Spalte: Kontaktdaten */}
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-3xl font-bold text-korff-primary mb-6">
                 Unsere Kontaktdaten
               </h2>
-              <div className="text-gray-600 space-y-4 text-lg">
+              <div className="text-korff-text space-y-4 text-lg">
                 <p>
                   Kanzlei Korff
                   <br />
@@ -26,7 +26,7 @@ const ContactSection = () => {
                   <span className="font-semibold">Telefon:</span>{" "}
                   <a
                     href="tel:+493085479867"
-                    className="text-blue-600 hover:underline"
+                    className="text-korff-secondary hover:underline"
                   >
                     +49 30 85479867
                   </a>
@@ -37,7 +37,7 @@ const ContactSection = () => {
                   <span className="font-semibold">Mail:</span>{" "}
                   <a
                     href="mailto:info@kanzlei-korff.de"
-                    className="text-blue-600 hover:underline"
+                    className="text-korff-secondary hover:underline"
                   >
                     info[at]kanzlei-korff.de
                   </a>
@@ -59,7 +59,7 @@ const ContactSection = () => {
 
             {/* Rechte Spalte: Kontaktformular */}
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-3xl font-bold text-korff-primary mb-6">
                 Kontaktieren Sie uns
               </h2>
               <form
@@ -70,7 +70,7 @@ const ContactSection = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-korff-text"
                   >
                     Name
                   </label>
@@ -79,14 +79,14 @@ const ContactSection = () => {
                     id="name"
                     name="name"
                     required
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-korff-secondary focus:border-korff-secondary"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-korff-text"
                   >
                     E-Mail
                   </label>
@@ -95,7 +95,7 @@ const ContactSection = () => {
                     id="email"
                     name="_replyto"
                     required
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-korff-secondary focus:border-korff-secondary"
                   />
                 </div>
 
@@ -103,7 +103,7 @@ const ContactSection = () => {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-korff-text"
                   >
                     Telefon
                   </label>
@@ -111,14 +111,14 @@ const ContactSection = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-korff-secondary focus:border-korff-secondary"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-korff-text"
                   >
                     Nachricht
                   </label>
@@ -127,14 +127,14 @@ const ContactSection = () => {
                     name="message"
                     rows={4}
                     required
-                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500"
+                    className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-korff-secondary focus:border-korff-secondary"
                   ></textarea>
                 </div>
 
                 <div>
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                    className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-korff-secondary hover:bg-korff-secondary/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-korff-secondary"
                   >
                     Senden
                   </button>

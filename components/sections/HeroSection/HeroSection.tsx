@@ -26,7 +26,7 @@ const HeroSection = () => {
       </div>
 
       {/* Neuer horizontaler Balken mit drei Einträgen */}
-      <div className="bg-red-600 text-white py-8 px-4 shadow-xl">
+      <div className="bg-korff-secondary text-white py-8 px-4 shadow-xl">
         <div className="container mx-auto flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-8">
           {/* Eintrag 1: Termine vereinbaren */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
