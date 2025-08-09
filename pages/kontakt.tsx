@@ -3,13 +3,11 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
 import ContactSection from "../components/ContactSection/ContactSection"; // <-- Import anpassen
-
+import PageHeader from "../components/PageHeader/PageHeader";
 const Kontakt = () => {
   return (
     <Layout>
-      <div className="bg-gray-700 text-white py-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold">Kontakt & Notruf</h1>
-      </div>
+      <PageHeader title="Kontakt & Notruf" />
       <ContactSection />
     </Layout>
   );
