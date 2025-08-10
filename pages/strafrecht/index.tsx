@@ -8,7 +8,7 @@ import AboutSection from "../../components/sections/AboutSection";
 import ContactSection from "../../components/ContactSection/ContactSection"; // <-- Import-Pfad korrigiert
 import MapSection from "../../components/sections/MapSection";
 
-const Home = () => {
+const StrafrechtHome = () => {
   return (
     <Layout>
       <HeroSection />
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default StrafrechtHome;
