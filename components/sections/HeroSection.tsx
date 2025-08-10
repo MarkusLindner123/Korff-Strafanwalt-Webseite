@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Die Schriftart wird über die Klasse 'font-sans' aus der globals.css angewendet */}
       <div
         className="font-sans relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('images/hero-bg.jpg')" }}
       >
         {/* Overlay für bessere Lesbarkeit des Textes */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           {/* Eintrag 1: Termine vereinbaren */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
             <img
-              src="/images/calender-icon.svg"
+              src="images/calender-icon.svg"
               alt="Kalender-Icon"
               className="h-10 w-10 mb-2 md:mb-0"
             />
@@ -48,7 +48,7 @@ const HeroSection = () => {
           {/* Eintrag 2: E-Mail senden */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
             <img
-              src="/images/mail-icon.svg"
+              src="images/mail-icon.svg"
               alt="Mail-Icon"
               className="h-10 w-10 mb-2 md:mb-0"
             />
@@ -66,7 +66,7 @@ const HeroSection = () => {
           {/* Eintrag 3: Öffnungszeiten */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
             <img
-              src="/images/clock-icon.svg"
+              src="images/clock-icon.svg"
               alt="Uhr-Icon"
               className="h-10 w-10 mb-2 md:mb-0"
             />

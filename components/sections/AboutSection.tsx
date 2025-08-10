@@ -10,7 +10,7 @@ const AboutSection = () => {
         <div className="md:w-1/2">
           {/* Bild mit abgerundeten Ecken, starkem Schatten und einem subtilen Hover-Effekt */}
           <img
-            src="/images/about-kanzlei.jpg"
+            src="images/about-kanzlei.jpg"
             alt="Kanzlei Korff in Berlin"
             className="rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-[1.02]"
           />
