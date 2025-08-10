@@ -1,20 +1,30 @@
 import React from "react";
 import Head from "next/head";
 
+
 // Globale Komponenten
+import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
+
+// Die Layout-Komponente für Unterseiten wird nun korrekt importiert
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
+// Die Komponente für die Downloads-Seite
 const DownloadsPage: React.FC = () => {
   return (
     <>
       <Head>
         <title>Downloads | Kanzlei Korff</title>
-        <meta name="description" content="Wichtige Dokumente und Downloads der Kanzlei Korff." />
+        <meta
+          name="description"
+          content="Wichtige Formulare und Dokumente zum Download für eine effiziente Bearbeitung Ihres Anliegens."
+        />
       </Head>
 
-      <PageHeader title="Downloads" />
+      <Header />
+      <PageHeader title="Wichtige Formulare und Dokumente" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-gray-800">
@@ -98,6 +108,7 @@ const DownloadsPage: React.FC = () => {
       </InformationenSubPageLayout>
 
       <ContactSection />
+      <Footer />
     </>
   );
 };
