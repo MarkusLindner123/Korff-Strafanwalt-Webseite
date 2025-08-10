@@ -57,7 +57,7 @@ const StrafrechtPage = () => {
           <h2 className="text-2xl font-bold text-korff-primary mt-12 mb-4">
             Wir verteidigen Sie erfolgreich u. a. in folgenden Fällen:
           </h2>
-          {/* Liste der Fachgebiete */}
+          {/* Liste der Fachgebiete, alphabetisch sortiert */}
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
             <li>
               <Link href="/strafrecht/allgemein">
@@ -68,6 +68,16 @@ const StrafrechtPage = () => {
                   <p className="text-sm text-korff-text">
                     (Diebstahl, Betrug, Nötigung, Körperverletzung, etc.)
                   </p>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link href="/strafrecht/beamten">
+                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
+                  <h3 className="text-xl font-semibold text-korff-primary">
+                    Beamtenstrafrecht / Soldatenstrafrecht
+                  </h3>
+                  <p className="text-sm text-korff-text"></p>
                 </div>
               </Link>
             </li>
@@ -84,26 +94,35 @@ const StrafrechtPage = () => {
               </Link>
             </li>
             <li>
-              <Link href="/strafrecht/wirtschaft">
+              <Link href="/strafrecht/jugend">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
                   <h3 className="text-xl font-semibold text-korff-primary">
-                    Wirtschaftsstrafrecht
+                    Jugendstrafrecht
+                  </h3>
+                  <p className="text-sm text-korff-text"></p>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link href="/strafrecht/medizin">
+                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
+                  <h3 className="text-xl font-semibold text-korff-primary">
+                    Medizin- / Arztstrafrecht
                   </h3>
                   <p className="text-sm text-korff-text">
-                    (Insolvenzverschleppung, Untreue, Bankrott, Schwarzarbeit)
+                    (Fahrlässige Tötung, fahrlässige Körperverletzung wg.
+                    „Kunstfehler“, Abrechnungsbetrug)
                   </p>
                 </div>
               </Link>
             </li>
             <li>
-              <Link href="/strafrecht/verkehr">
+              <Link href="/strafrecht/rechtsmittel">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
                   <h3 className="text-xl font-semibold text-korff-primary">
-                    Verkehrsstrafrecht
+                    Rechtsmittelverteidigung
                   </h3>
-                  <p className="text-sm text-korff-text">
-                    (Fahren ohne Fahrerlaubnis, Trunkenheitsfahrt, Unfallflucht)
-                  </p>
+                  <p className="text-sm text-korff-text"></p>
                 </div>
               </Link>
             </li>
@@ -112,16 +131,6 @@ const StrafrechtPage = () => {
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
                   <h3 className="text-xl font-semibold text-korff-primary">
                     Sexualstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text"></p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/jugend">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Jugendstrafrecht
                   </h3>
                   <p className="text-sm text-korff-text"></p>
                 </div>
@@ -140,35 +149,26 @@ const StrafrechtPage = () => {
               </Link>
             </li>
             <li>
-              <Link href="/strafrecht/medizin">
+              <Link href="/strafrecht/verkehr">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
                   <h3 className="text-xl font-semibold text-korff-primary">
-                    Medizin- / Arztstrafrecht
+                    Verkehrsstrafrecht
                   </h3>
                   <p className="text-sm text-korff-text">
-                    (Fahrlässige Tötung, fahrlässige Körperverletzung wg.
-                    „Kunstfehler“, Abrechnungsbetrug)
+                    (Fahren ohne Fahrerlaubnis, Trunkenheitsfahrt, Unfallflucht)
                   </p>
                 </div>
               </Link>
             </li>
             <li>
-              <Link href="/strafrecht/beamten">
+              <Link href="/strafrecht/wirtschaft">
                 <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
                   <h3 className="text-xl font-semibold text-korff-primary">
-                    Beamtenstrafrecht / Soldatenstrafrecht
+                    Wirtschaftsstrafrecht
                   </h3>
-                  <p className="text-sm text-korff-text"></p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/rechtsmittel">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Rechtsmittelverteidigung
-                  </h3>
-                  <p className="text-sm text-korff-text"></p>
+                  <p className="text-sm text-korff-text">
+                    (Insolvenzverschleppung, Untreue, Bankrott, Schwarzarbeit)
+                  </p>
                 </div>
               </Link>
             </li>

@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --korff-primary: #1e3a8a;
-  --korff-secondary: #fcd34d;
-  --korff-background: #f3f4f6;
-  --korff-text: #1f2937;
+  --korff-primary: #0f172a; /* Ein dunkles Blaugrau für Hauptakzente */
+  --korff-secondary: #0d9488; /* Ein Petrol-Ton für Akzente und Links */
+  --korff-background: #f1f5f9; /* Ein sehr helles Graublau als Hintergrund */
+  --korff-text: #1e293b; /* Ein dunkler Text, der gut lesbar ist */
 }
 
-/*
-  Setzen der Schriftart global über die CSS-Variable
-  Die Schriftart wird nun zentral über _app.tsx geladen.
-*/
 body {
   color: var(--korff-text);
   background-color: var(--korff-background);

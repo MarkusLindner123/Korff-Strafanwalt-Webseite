@@ -3,13 +3,13 @@ import Head from "next/head";
 import Link from "next/link";
 
 // Globale Komponenten
-import Header from "../../../components/Header/Header";
-import PageHeader from "../../../components/PageHeader/PageHeader";
-import Footer from "../../../components/Footer/Footer";
-import ContactSection from "../../../components/ContactSection/ContactSection";
+import Header from "../../components/Header/Header";
+import PageHeader from "../../components/PageHeader/PageHeader";
+import Footer from "../../components/Footer/Footer";
+import ContactSection from "../../components/ContactSection/ContactSection";
 
 // Die neue Layout-Komponente für Unterseiten
-import StrafrechtSubPageLayout from "../../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
+import StrafrechtSubPageLayout from "../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
 const VerkehrsStrafrechtPage = () => {
   return (

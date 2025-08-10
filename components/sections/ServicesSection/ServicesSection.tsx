@@ -1,56 +1,86 @@
-// components/ServicesSection/ServicesSection.tsx
-
 import React from "react";
 import Link from "next/link";
 
-const services = [
+// TypeScript-Schnittstelle, um die Struktur eines Service-Objekts zu definieren
+interface Service {
+  title: string;
+  description: string;
+  link: string;
+}
+
+// Array von Dienstleistungen, ohne Icons
+const services: Service[] = [
   {
     title: "Strafrecht",
     description:
-      "Wir verteidigen Sie in allen Bereichen des allgemeinen Strafrechts.",
+      "Umfassende Verteidigung in allen Bereichen des allgemeinen Strafrechts.",
     link: "/strafrecht",
   },
   {
+    title: "Verkehrsstrafrecht",
+    description:
+      "Spezialisierte Vertretung bei Verkehrsdelikten wie Trunkenheit am Steuer oder Unfallflucht.",
+    link: "/strafrecht/verkehrsstrafrecht",
+  },
+  {
+    title: "Drogenstrafrecht",
+    description:
+      "Wir verteidigen Sie bei Delikten nach dem Betäubungsmittelgesetz (BtMG).",
+    link: "/strafrecht/betaeubungsmittelstrafrecht",
+  },
+  {
     title: "Ermittlungsverfahren",
-    description: "Frühzeitige Beratung kann entscheidend sein.",
+    description:
+      "Wir stehen Ihnen schon während des Ermittlungsverfahrens zur Seite. Frühzeitige Beratung ist entscheidend.",
     link: "/strafrecht/ermittlungsverfahren",
   },
   {
     title: "Hausdurchsuchung",
     description:
-      "Wir stehen Ihnen im Fall einer Hausdurchsuchung sofort zur Seite.",
+      "Rechtlicher Beistand und Soforthilfe im Falle einer Hausdurchsuchung. Bleiben Sie ruhig, wir sind für Sie da.",
     link: "/strafrecht/hausdurchsuchung",
   },
   {
-    title: "Notruf",
-    description: "24/7 erreichbar bei Festnahme oder Durchsuchung.",
+    title: "Notruf 24/7",
+    description:
+      "Rund um die Uhr erreichbar bei Festnahme oder Hausdurchsuchung. Zögern Sie nicht anzurufen!",
     link: "/kontakt",
   },
 ];
 
+// Wiederverwendbare Komponente für die Service-Karten
+const ServiceCard = ({ service }: { service: Service }) => (
+  <Link href={service.link}>
+    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full flex flex-col items-center text-center border border-gray-200">
+      <h3 className="text-xl font-semibold text-korff-text mb-2">
+        {service.title}
+      </h3>
+      <p className="text-korff-text mb-6 flex-grow">{service.description}</p>
+      <div className="mt-auto">
+        <span className="inline-block px-6 py-2 border-2 border-korff-primary text-korff-primary font-bold rounded-full hover:bg-korff-primary hover:text-white transition-colors duration-300">
+          Mehr erfahren
+        </span>
+      </div>
+    </div>
+  </Link>
+);
+
 const ServicesSection = () => {
   return (
-    <section className="py-20 bg-gray-100">
+    // Hintergrundfarbe und Schriftart werden aus den Tailwind-Variablen übernommen
+    <section className="py-16 md:py-24 bg-korff-background font-sans">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
-          Unsere Leistungen
+        <h2 className="text-3xl md:text-4xl font-extrabold text-korff-text mb-4">
+          Unsere Kompetenzen
         </h2>
+        <p className="text-lg text-korff-text mb-12 max-w-2xl mx-auto">
+          Wir stehen Ihnen in den wichtigsten Bereichen des Strafrechts zur
+          Seite, um Ihre Rechte zu wahren.
+        </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Link href={service.link} key={index}>
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer h-full flex flex-col">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-4 flex-grow">
-                  {service.description}
-                </p>
-                <div className="text-blue-500 font-bold mt-auto">
-                  Mehr erfahren
-                </div>
-              </div>
-            </Link>
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
       </div>
