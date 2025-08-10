@@ -3,7 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 
 // Globale Komponenten
+import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
 // Die neue Layout-Komponente für Unterseiten
@@ -19,6 +21,8 @@ const AllgemeinesStrafrechtPage = () => {
           content="Umfassende Verteidigung im Allgemeinen Strafrecht. Wir verteidigen Sie bei Diebstahl, Betrug, Körperverletzung, Sachbeschädigung und weiteren Delikten."
         />
       </Head>
+
+      <Header />
 
       <PageHeader title="Allgemeines Strafrecht" />
 
@@ -78,6 +82,7 @@ const AllgemeinesStrafrechtPage = () => {
       </StrafrechtSubPageLayout>
 
       <ContactSection />
+      <Footer />
     </>
   );
 };

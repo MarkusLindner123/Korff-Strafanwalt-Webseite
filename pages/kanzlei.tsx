@@ -1,13 +1,14 @@
 // pages/kanzlei.tsx
 
 import React from "react";
+import Layout from "../components/Layout/Layout";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { useI18n } from "../lib/i18n/I18nProvider";
 
 const Kanzlei = () => {
   const { t } = useI18n();
   return (
-    <>
+    <Layout>
       <PageHeader title={t("home.about.title")} />
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
@@ -22,7 +23,7 @@ const Kanzlei = () => {
           </p>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

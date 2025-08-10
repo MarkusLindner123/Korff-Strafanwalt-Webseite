@@ -1,20 +1,30 @@
 import React from "react";
 import Head from "next/head";
 
+
 // Globale Komponenten
+import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
+
+// Die Layout-Komponente für Unterseiten wird korrekt importiert
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
+// Die Komponente für die Untersuchungshaft-Seite
 const UntersuchungshaftPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Untersuchungshaft | Kanzlei Korff</title>
-        <meta name="description" content="Informationen zur Untersuchungshaft und erste Schritte." />
+        <title>Untersuchungshaft in Berlin | Kanzlei Korff</title>
+        <meta
+          name="description"
+          content="Eine Untersuchungshaft ist eine schwerwiegende Maßnahme. Erfahren Sie, welche Voraussetzungen erfüllt sein müssen und wie Rechtsanwalt Korff Sie vertritt."
+        />
       </Head>
 
-      <PageHeader title="Untersuchungshaft" />
+      <Header />
+      <PageHeader title="Untersuchungshaft: Ihre Rechte bei der Verhaftung" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-gray-800">
@@ -82,6 +92,7 @@ const UntersuchungshaftPage: React.FC = () => {
       </InformationenSubPageLayout>
 
       <ContactSection />
+      <Footer />
     </>
   );
 };
