@@ -4,22 +4,58 @@ import Link from "next/link";
 import Image from "next/image";
 import getConfig from "next/config";
 
+// Holt den basePath aus der Next.js-Konfiguration, um Bilder korrekt zu laden.
 const { publicRuntimeConfig } = getConfig();
 const basePath = publicRuntimeConfig?.basePath || "";
 
+// Eine Hilfskomponente für das Hamburger-Icon mit Animation
+const Hamburger = ({
+  isOpen,
+  onClick,
+}: {
+  isOpen: boolean;
+  onClick: () => void;
+}) => (
+  <button
+    onClick={onClick}
+    className="p-2 relative z-50 flex h-8 w-8 flex-col items-center justify-center space-y-1.5 focus:outline-none"
+    aria-label="Toggle mobile menu"
+  >
+    <span
+      className={`block h-0.5 w-6 transform bg-korff-primary transition-all duration-300 ease-out ${
+        isOpen ? "translate-y-2 rotate-45" : ""
+      }`}
+    ></span>
+    <span
+      className={`block h-0.5 w-6 bg-korff-primary transition-all duration-300 ease-out ${
+        isOpen ? "opacity-0" : ""
+      }`}
+    ></span>
+    <span
+      className={`block h-0.5 w-6 transform bg-korff-primary transition-all duration-300 ease-out ${
+        isOpen ? "-translate-y-2 -rotate-45" : ""
+      }`}
+    ></span>
+  </button>
+);
+
 const Header = () => {
+  // Zustände für die mobile Menüansicht und Dropdowns
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [strafrechtDropdownOpen, setStrafrechtDropdownOpen] = useState(false);
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
 
+  // Schaltet das Hauptmenü um und schließt Dropdowns für einen sauberen Zustand.
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    // Dropdowns bei Menüschließung zurücksetzen
     if (isMenuOpen) {
       setStrafrechtDropdownOpen(false);
       setInfoDropdownOpen(false);
     }
   };
 
+  // Handler für die mobilen Dropdowns
   const toggleStrafrechtDropdown = () => {
     setStrafrechtDropdownOpen(!strafrechtDropdownOpen);
   };
@@ -30,21 +66,23 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md z-50 font-['Inter']">
+      {/* Container für Desktop- und mobile Navigation */}
       <nav className="container mx-auto flex items-center p-4">
         {/* Logo */}
         <Link href="/">
           <Image
-            src={`${basePath}/images/logo-korff.png`}
+            src={`${basePath}/images/logo-korff1.png`}
             alt="Kanzlei Korff Logo"
-            width={150}
-            height={40}
+            width={150} // Basisbreite für Desktop
+            height={40} // Basishöhe für Desktop
             className="h-10 w-auto md:h-12 cursor-pointer"
             priority
           />
         </Link>
 
-        {/* Mobile Header */}
+        {/* Nur mobile Elemente: Telefon-Icon und Hamburger-Button */}
         <div className="flex items-center space-x-4 md:hidden ml-auto">
+          {/* Telefon-Link */}
           <a
             href="tel:+493085479867"
             className="flex items-center text-korff-secondary hover:text-korff-primary transition-colors"
@@ -57,20 +95,11 @@ const Header = () => {
               className="h-5 w-5 mr-2"
             />
           </a>
-          <button
-            onClick={toggleMenu}
-            className="text-korff-primary text-2xl focus:outline-none"
-            aria-label="Toggle mobile menu"
-          >
-            <div className="space-y-2">
-              <span className="block h-0.5 w-8 bg-korff-primary"></span>
-              <span className="block h-0.5 w-8 bg-korff-primary"></span>
-              <span className="block h-0.5 w-8 bg-korff-primary"></span>
-            </div>
-          </button>
+          {/* Hamburger-Menü-Button */}
+          <Hamburger isOpen={isMenuOpen} onClick={toggleMenu} />
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop-Navigation (auf Mobilgeräten ausgeblendet) */}
         <div className="hidden md:flex md:items-center md:space-x-6 ml-10">
           <Link href="/kanzlei">
             <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer">
@@ -78,7 +107,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Strafrecht Dropdown */}
+          {/* Strafrecht-Dropdown für Desktop */}
           <div className="relative group z-50">
             <Link href="/strafrecht">
               <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer flex items-center">
@@ -161,7 +190,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Informationen Dropdown */}
+          {/* Informationen-Dropdown für Desktop */}
           <div className="relative group z-50">
             <Link href="/informationen">
               <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer flex items-center">
@@ -215,7 +244,7 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Desktop Telefonnummer */}
+        {/* Desktop-Telefonnummer */}
         <div className="hidden md:block ml-auto">
           <div className="p-2 bg-white rounded-lg shadow-lg">
             <div className="flex items-center space-x-2">
@@ -238,11 +267,11 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Mobile Menü */}
+      {/* Mobile-Menü (einklappbar) */}
       <div
-        className={`md:hidden ${
-          isMenuOpen ? "block" : "hidden"
-        } bg-white shadow-md absolute w-full z-40 top-16`}
+        className={`md:hidden absolute w-full z-40 top-16 bg-white shadow-md transition-all duration-300 ease-out overflow-hidden ${
+          isMenuOpen ? "max-h-screen" : "max-h-0"
+        }`}
       >
         <div className="flex flex-col space-y-4 p-4">
           <Link href="/kanzlei" onClick={toggleMenu}>
@@ -251,16 +280,18 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Mobile Strafrecht */}
-          <div className="relative">
-            <div className="flex justify-between items-center border-b pb-2">
+          {/* Mobiles Strafrecht */}
+          <div>
+            <div
+              className="flex justify-between items-center border-b pb-2 cursor-pointer"
+              onClick={toggleStrafrechtDropdown}
+            >
               <Link href="/strafrecht" onClick={toggleMenu}>
-                <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer text-lg">
+                <div className="text-korff-text hover:text-korff-primary transition-colors text-lg">
                   Strafrecht
                 </div>
               </Link>
               <span
-                onClick={toggleStrafrechtDropdown}
                 className={`transform transition-transform duration-200 cursor-pointer ${
                   strafrechtDropdownOpen ? "rotate-180" : ""
                 }`}
@@ -268,8 +299,13 @@ const Header = () => {
                 &#9660;
               </span>
             </div>
-            {strafrechtDropdownOpen && (
-              <div className="flex flex-col space-y-2 pl-4 py-2 bg-korff-background">
+            {/* Animiertes Submenu */}
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-out ${
+                strafrechtDropdownOpen ? "max-h-screen" : "max-h-0"
+              }`}
+            >
+              <div className="flex flex-col space-y-2 pl-4 py-2 bg-gray-100 rounded-b-lg">
                 <Link href="/strafrecht/allgemein" onClick={toggleMenu}>
                   <div className="text-sm text-korff-text hover:text-korff-primary">
                     Allgemeines Strafrecht
@@ -321,14 +357,17 @@ const Header = () => {
                   </div>
                 </Link>
               </div>
-            )}
+            </div>
           </div>
 
           {/* Mobile Informationen */}
-          <div className="relative">
-            <div className="flex justify-between items-center border-b pb-2">
+          <div>
+            <div
+              className="flex justify-between items-center border-b pb-2 cursor-pointer"
+              onClick={toggleInfoDropdown}
+            >
               <Link href="/informationen" onClick={toggleMenu}>
-                <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer text-lg">
+                <div className="text-korff-text hover:text-korff-primary transition-colors text-lg">
                   Informationen
                 </div>
               </Link>
@@ -341,8 +380,13 @@ const Header = () => {
                 &#9660;
               </span>
             </div>
-            {infoDropdownOpen && (
-              <div className="flex flex-col space-y-2 pl-4 py-2 bg-korff-background">
+            {/* Animiertes Submenu */}
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-out ${
+                infoDropdownOpen ? "max-h-screen" : "max-h-0"
+              }`}
+            >
+              <div className="flex flex-col space-y-2 pl-4 py-2 bg-gray-100 rounded-b-lg">
                 <Link href="/informationen/downloads" onClick={toggleMenu}>
                   <div className="text-sm text-korff-text hover:text-korff-primary">
                     Downloads
@@ -388,7 +432,7 @@ const Header = () => {
                   </div>
                 </Link>
               </div>
-            )}
+            </div>
           </div>
 
           <Link href="/kontakt" onClick={toggleMenu}>
