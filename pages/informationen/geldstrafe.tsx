@@ -1,19 +1,15 @@
 import React from "react";
 import Head from "next/head";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Globale Layout-Komponente
+import Layout from "../../components/Layout/Layout";
 
-// Die Layout-Komponente für Unterseiten wird korrekt importiert
+// Die spezifische Layout-Komponente für Unterseiten
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
-// Die Komponente für die Geldstrafe-Seite
 const GeldstrafePage: React.FC = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Geldstrafe | Kanzlei Korff</title>
         <meta
@@ -21,9 +17,6 @@ const GeldstrafePage: React.FC = () => {
           content="Wie wird eine Geldstrafe berechnet? Erfahren Sie alles über Tagessätze und wie sich Ihr Einkommen auf die Höhe der Strafe auswirkt."
         />
       </Head>
-
-      <Header />
-      <PageHeader title="Geldstrafe: Berechnung und Bedeutung" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-gray-800">
@@ -88,10 +81,7 @@ const GeldstrafePage: React.FC = () => {
           </p>
         </div>
       </InformationenSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

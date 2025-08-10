@@ -1,20 +1,15 @@
 import React from "react";
 import Head from "next/head";
 
+// Globale Layout-Komponente
+import Layout from "../../components/Layout/Layout";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
-
-// Die Layout-Komponente für Unterseiten wird korrekt importiert
+// Die spezifische Layout-Komponente für Unterseiten
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
-// Die Komponente für die Hausdurchsuchungs-Seite
 const HausdurchsuchungPage: React.FC = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Verhalten bei einer Hausdurchsuchung | Kanzlei Korff</title>
         <meta
@@ -22,9 +17,6 @@ const HausdurchsuchungPage: React.FC = () => {
           content="Eine Hausdurchsuchung ist eine Ausnahmesituation. Erfahren Sie, wie Sie sich richtig verhalten und Ihre Rechte wahren. Rechtsanwalt Korff hilft."
         />
       </Head>
-
-      <Header />
-      <PageHeader title="Hausdurchsuchung: Ihre Rechte und Pflichten" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-gray-800">
@@ -83,10 +75,7 @@ const HausdurchsuchungPage: React.FC = () => {
           </p>
         </div>
       </InformationenSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

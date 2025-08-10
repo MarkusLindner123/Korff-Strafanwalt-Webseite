@@ -2,18 +2,15 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Importieren der globalen Layout-Komponente
+import Layout from "../../components/Layout/Layout";
 
-// Die neue Layout-Komponente für Unterseiten
+// Importieren der spezifischen Layout-Komponente für Strafrecht-Unterseiten
 import StrafrechtSubPageLayout from "../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
 const JugendstrafrechtPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Jugendstrafrecht | Kanzlei Korff</title>
         <meta
@@ -22,10 +19,9 @@ const JugendstrafrechtPage = () => {
         />
       </Head>
 
-      <Header />
-
-      <PageHeader title="Jugendstrafrecht" />
-
+      {/* Die StrafrechtSubPageLayout-Komponente umschließt den gesamten Seiteninhalt.
+          Sie kümmert sich um das Rendering von PageHeader, der Seitennavigation und der ContactSection.
+          Der Titel wird vom Layout-Component selbst ermittelt. */}
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
           <p className="font-semibold text-gray-900 mb-6">
@@ -103,10 +99,7 @@ const JugendstrafrechtPage = () => {
           </p>
         </div>
       </StrafrechtSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

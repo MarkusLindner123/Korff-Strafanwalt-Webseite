@@ -1,21 +1,25 @@
 import type { NextConfig } from "next";
 
-// Wir prüfen, ob wir uns im Produktionsmodus befinden, indem wir die Umgebungsvariable NODE_ENV überprüfen.
+// Wir prüfen, ob wir uns im Produktionsmodus (beim `build`) befinden.
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  // Aktiviert den statischen Export-Modus nur für die Produktion.
+  // Für den Build-Prozess einer statischen Seite ist "export" zwingend notwendig.
+  // Das sorgt dafür, dass alle HTML-, CSS- und JS-Dateien im 'out'-Ordner landen.
   output: isProd ? "export" : undefined,
 
-  // Setzt den Basis-Pfad nur für die Produktion.
+  // Der 'basePath' ist der wichtigste Teil der Lösung.
+  // Er teilt Next.js mit, dass deine App in einem Unterverzeichnis gehostet wird.
+  // Alle internen Links und Asset-Pfade werden automatisch mit '/Korff-Strafanwalt-Webseite'
+  // präfixiert. Das behebt dein Problem mit den verschwindenden Bildern.
   basePath: isProd ? "/Korff-Strafanwalt-Webseite" : "",
 
-  // Definiert den Präfix für alle Assets, wieder nur in der Produktion.
-  // Es sollte auf den gleichen Pfad wie basePath gesetzt werden.
+  // Der 'assetPrefix' stellt sicher, dass auch Bilder und andere Assets
+  // den korrekten Pfad-Präfix erhalten. Wir setzen ihn auf das Gleiche wie 'basePath'.
   assetPrefix: isProd ? "/Korff-Strafanwalt-Webseite/" : "",
 
-  // Deaktiviert die interne Next.js-Bildoptimierung,
-  // da sie mit statischen Exports nicht kompatibel ist.
+  // 'unoptimized: true' muss gesetzt werden, da die Next.js-Bildoptimierung
+  // einen Server benötigt, der bei statischen Exports nicht existiert.
   images: {
     unoptimized: true,
   },

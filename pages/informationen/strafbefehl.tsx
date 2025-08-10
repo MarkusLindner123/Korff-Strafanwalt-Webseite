@@ -1,20 +1,15 @@
 import React from "react";
 import Head from "next/head";
 
+// Globale Layout-Komponente
+import Layout from "../../components/Layout/Layout";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
-
-// Die Layout-Komponente für Unterseiten wird korrekt importiert
+// Die spezifische Layout-Komponente für Unterseiten
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
-// Die Komponente für die Strafbefehl-Seite
 const StrafbefehlPage: React.FC = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Strafbefehl | Kanzlei Korff</title>
         <meta
@@ -22,9 +17,6 @@ const StrafbefehlPage: React.FC = () => {
           content="Sie haben einen Strafbefehl erhalten? Erfahren Sie, was das bedeutet, welche Fristen Sie beachten müssen und wie Rechtsanwalt Korff Ihnen helfen kann."
         />
       </Head>
-
-      <Header />
-      <PageHeader title="Strafbefehl: Was tun, wenn Sie einen erhalten?" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-gray-800">
@@ -79,10 +71,7 @@ const StrafbefehlPage: React.FC = () => {
           </p>
         </div>
       </InformationenSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

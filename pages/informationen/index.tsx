@@ -2,16 +2,15 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Globale Layout-Komponente
+import Layout from "../../components/Layout/Layout";
+
+// Die spezifische Layout-Komponente für Unterseiten
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
 const InformationenIndexPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Informationen | Kanzlei Korff</title>
         <meta
@@ -19,10 +18,6 @@ const InformationenIndexPage = () => {
           content="Wichtige rechtliche Informationen und erste Ratschläge für Betroffene in einem Strafverfahren."
         />
       </Head>
-
-      <Header />
-
-      <PageHeader title="Wichtige Informationen" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
@@ -62,10 +57,7 @@ const InformationenIndexPage = () => {
           </p>
         </div>
       </InformationenSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

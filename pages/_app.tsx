@@ -1,9 +1,12 @@
 // pages/_app.tsx
+
 import "../styles/globals.css";
 import { Inter } from "next/font/google";
 import type { AppProps } from "next/app";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+// Importiere die CookieBanner-Komponente
+import CookieBanner from "../components/CookieBanner/CookieBanner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -62,6 +65,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       {isLoading && <Loader />}
       {/* Hier wird die aktuelle Seite gerendert */}
       <Component {...pageProps} />
+      {/* Füge das Cookie-Banner hier ein */}
+      <CookieBanner />
     </main>
   );
 }
