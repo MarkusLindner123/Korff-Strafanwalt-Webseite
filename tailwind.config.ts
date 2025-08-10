@@ -9,8 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "korff-primary": "var(--korff-primary)",
+        "korff-secondary": "var(--korff-secondary)",
+        "korff-background": "var(--korff-background)",
+        "korff-text": "var(--korff-text)",
+      },
+      fontFamily: {
+        // Jetzt verweist unsere 'sans' Schriftfamilie auf die CSS-Variable
+        sans: ["var(--font-sans)", "sans-serif"],
       },
     },
   },

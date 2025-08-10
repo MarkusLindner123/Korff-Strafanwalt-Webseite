@@ -1,5 +1,3 @@
-// components/HeroSection/HeroSection.tsx
-
 import React from "react";
 import Link from "next/link";
 
@@ -7,8 +5,9 @@ const HeroSection = () => {
   return (
     <>
       {/* Hero-Sektion mit Hintergrundbild und Text */}
+      {/* Die Schriftart wird über die Klasse 'font-sans' aus der globals.css angewendet */}
       <div
-        className="relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center"
+        className="font-sans relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center"
         style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
       >
         {/* Overlay für bessere Lesbarkeit des Textes */}
@@ -26,7 +25,8 @@ const HeroSection = () => {
       </div>
 
       {/* Neuer horizontaler Balken mit drei Einträgen */}
-      <div className="bg-red-600 text-white py-8 px-4 shadow-xl">
+      {/* Der Hintergrund des Balkens verwendet nun die CSS-Variable --korff-secondary */}
+      <div className="bg-[var(--korff-secondary)] text-white py-8 px-4 shadow-xl">
         <div className="container mx-auto flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-8">
           {/* Eintrag 1: Termine vereinbaren */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
@@ -36,9 +36,7 @@ const HeroSection = () => {
               className="h-10 w-10 mb-2 md:mb-0"
             />
             <div className="flex flex-col items-center md:items-start">
-              {/* Die Überschrift ist jetzt kleiner (text-sm) */}
               <h3 className="text-sm font-normal">Termine vereinbaren</h3>
-              {/* Die Telefonnummer ist größer (text-2xl) */}
               <a
                 href="tel:+493085479867"
                 className="mt-1 text-2xl font-bold hover:underline transition-colors"
@@ -56,9 +54,7 @@ const HeroSection = () => {
               className="h-10 w-10 mb-2 md:mb-0"
             />
             <div className="flex flex-col items-center md:items-start">
-              {/* Die Überschrift ist jetzt kleiner (text-sm) */}
               <h3 className="text-sm font-normal">E-Mail senden</h3>
-              {/* Die E-Mail-Adresse ist größer (text-lg) */}
               <a
                 href="mailto:info@kanzlei.de"
                 className="mt-1 text-lg font-bold hover:underline transition-colors"
@@ -76,9 +72,7 @@ const HeroSection = () => {
               className="h-10 w-10 mb-2 md:mb-0"
             />
             <div className="flex flex-col items-center md:items-start">
-              {/* Die Überschrift ist jetzt kleiner (text-sm) */}
               <h3 className="text-sm font-normal">Unsere Öffnungszeiten</h3>
-              {/* Die Öffnungszeiten sind größer (text-lg) */}
               <p className="mt-1 text-lg font-bold">MO-FR: 09-17 Uhr</p>
             </div>
           </div>

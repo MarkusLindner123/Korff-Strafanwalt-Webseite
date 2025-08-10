@@ -1,28 +1,29 @@
-// components/AboutSection/AboutSection.tsx
-
 import React from "react";
 import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-        {/* Bild */}
+    // Hintergrund der Sektion verwendet jetzt eine graue Farbe für subtilen Kontrast
+    <section className="py-24 bg-gray-50">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+        {/* Bild-Container */}
         <div className="md:w-1/2">
-          {/* Platzhalter-Bild. Sie können es später durch ein echtes Foto ersetzen */}
+          {/* Bild mit abgerundeten Ecken, starkem Schatten und einem subtilen Hover-Effekt */}
           <img
             src="/images/about-kanzlei.jpg"
             alt="Kanzlei Korff in Berlin"
-            className="rounded-lg shadow-lg"
+            className="rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-[1.02]"
           />
         </div>
 
-        {/* Text */}
+        {/* Text-Container */}
         <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          {/* Die Überschrift verwendet jetzt die primäre Farbe aus der globals.css */}
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-snug tracking-tight text-[var(--korff-primary)] mb-6">
             Kanzlei Korff: Ihr Anwalt in Berlin
           </h2>
-          <p className="text-gray-600 mb-6">
+          {/* Der Fließtext verwendet die definierte Textfarbe */}
+          <p className="text-lg text-[var(--korff-text)] mb-8">
             Als erfahrene Anwaltskanzlei in Berlin-Mitte stehen wir für
             fundierte juristische Beratung und entschlossene
             Interessenvertretung. Unser Fokus liegt auf der Strafverteidigung
@@ -32,7 +33,8 @@ const AboutSection = () => {
             Verfahrens.
           </p>
           <Link href="/kanzlei">
-            <button className="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-full transition-colors duration-300">
+            {/* Der Button verwendet nun die sekundäre Akzentfarbe und die primäre Farbe für den Hover-Effekt */}
+            <button className="px-8 py-4 bg-[var(--korff-secondary)] text-white font-bold rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-[var(--korff-primary)] focus:outline-none focus:ring-4 focus:ring-[var(--korff-secondary)] focus:ring-opacity-50">
               Mehr über uns
             </button>
           </Link>
