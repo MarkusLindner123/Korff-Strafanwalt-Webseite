@@ -1,12 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout/Layout";
 
 // Die Datenschutzerklärung ist eine eigenständige Seite.
 // Durch die Verwendung des Layout-Komponenten wird sichergestellt,
 // dass Header und Footer automatisch geladen werden.
 const Datenschutz = () => {
   return (
-    <Layout>
+    <>
       <div className="container mx-auto p-8 max-w-4xl">
         <h1 className="text-3xl font-bold mb-6 text-gray-900">
           Datenschutzerklärung
@@ -144,7 +143,7 @@ const Datenschutz = () => {
 
         <p className="text-sm text-gray-500 mt-8">Stand: 07.08.2025</p>
       </div>
-    </Layout>
+    </>
   );
 };
 

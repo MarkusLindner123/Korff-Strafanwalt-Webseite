@@ -1,37 +1,23 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 // Globale Komponenten
-import Header from "../../../components/Header/Header";
 import PageHeader from "../../../components/PageHeader/PageHeader";
-import Footer from "../../../components/Footer/Footer";
 import ContactSection from "../../../components/ContactSection/ContactSection";
-
-// Die neue Layout-Komponente für Unterseiten
 import StrafrechtSubPageLayout from "../../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
-const AllgemeinesStrafrechtPage = () => {
+const AllgemeinesStrafrechtIndexPage = () => {
   return (
     <>
       <Head>
-        <title>Allgemeines Strafrecht | Kanzlei</title>
-        <meta
-          name="description"
-          content="Verteidigung bei 'Alltagskriminalität': Diebstahl, Betrug, Nötigung und anderen Delikten des allgemeinen Strafrechts."
-        />
+        <title>Allgemeines Strafrecht | Kanzlei Korff</title>
+        <meta name="description" content="Überblick über das Allgemeine Strafrecht." />
       </Head>
 
-      <Header />
-
-      {/* PageHeader mit neuem Untertitel */}
       <PageHeader title="Allgemeines Strafrecht" />
 
-      {/* Hier wird die Layout-Komponente genutzt, um das Zwei-Spalten-Layout zu erstellen */}
       <StrafrechtSubPageLayout>
-        {/*
-          Der Inhalt in diesem Bereich wird automatisch in die rechte Spalte
-          der Layout-Komponente eingefügt.
-        */}
         <div className="prose max-w-none text-lg text-gray-700">
           <p>
             Unter dem Begriff **Allgemeines Strafrecht** wird gemeinhin die
@@ -102,9 +88,8 @@ const AllgemeinesStrafrechtPage = () => {
       </StrafrechtSubPageLayout>
 
       <ContactSection />
-      <Footer />
     </>
   );
 };
 
-export default AllgemeinesStrafrechtPage;
+export default AllgemeinesStrafrechtIndexPage;

@@ -3,9 +3,7 @@ import Head from "next/head";
 import Link from "next/link"; // 'Link' wird hier verwendet und bleibt
 
 // Globale Komponenten
-import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
 // Die neue Layout-Komponente für Unterseiten
@@ -15,16 +13,11 @@ const BeamtenstrafrechtPage = () => {
   return (
     <>
       <Head>
-        <title>Beamten- und Soldatenstrafrecht | Kanzlei Korff</title>
-        <meta
-          name="description"
-          content="Spezialisierte Strafverteidigung für Beamte und Soldaten in Disziplinar- und Ermittlungsverfahren. Wir sichern Ihre berufliche Zukunft."
-        />
+        <title>Beamtenstrafrecht / Soldatenstrafrecht | Kanzlei Korff</title>
+        <meta name="description" content="Verteidigung im Beamten- und Soldatenstrafrecht." />
       </Head>
 
-      <Header />
-
-      <PageHeader title="Beamten- / Soldatenstrafrecht" />
+      <PageHeader title="Beamtenstrafrecht / Soldatenstrafrecht" />
 
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
@@ -85,7 +78,6 @@ const BeamtenstrafrechtPage = () => {
       </StrafrechtSubPageLayout>
 
       <ContactSection />
-      <Footer />
     </>
   );
 };
