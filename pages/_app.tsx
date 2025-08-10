@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { I18nProvider, useI18n } from "../lib/i18n/I18nProvider";
+import Layout from "../components/Layout/Layout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,10 +44,12 @@ function AppShell({ Component, pageProps }: AppProps) {
   }, [router]);
 
   return (
-    <main className={`${inter.variable} font-sans`}>
+    <div className={`${inter.variable} font-sans`}>
       {isLoading && <Loader />}
-      <Component {...pageProps} />
-    </main>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
   );
 }
 
