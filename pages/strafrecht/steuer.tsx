@@ -35,8 +35,9 @@ const SteuerstrafrechtPage = () => {
           </p>
           <p>
             Wir beraten Sie von der Vermeidung eines Ermittlungsverfahrens durch
-            die Steuerfahndung, beispielsweise durch eine rechtzeitige
-            **Selbstanzeige**, bis hin zur Verteidigung in allen Instanzen.
+            die Steuerfahndung, beispielsweise durch eine rechtzeitige{" "}
+            <strong>Selbstanzeige</strong>, bis hin zur Verteidigung in allen
+            Instanzen.
           </p>
 
           <h3 className="mt-8 text-xl font-bold text-gray-800">
@@ -44,16 +45,21 @@ const SteuerstrafrechtPage = () => {
           </h3>
           <p>Zu den klassischen Steuerstraftaten gehören:</p>
           <ul className="list-disc list-inside space-y-2">
-            <li>die **Steuerhinterziehung** (§ 370 AO)</li>
-            <li>die **Steuerhehlerei** (§ 374 AO)</li>
             <li>
-              Fälle der gewerbsmäßigen **Umsatzsteuerhinterziehung** (z.B.
+              die <strong>Steuerhinterziehung</strong> (§ 370 AO)
+            </li>
+            <li>
+              die <strong>Steuerhehlerei</strong> (§ 374 AO)
+            </li>
+            <li>
+              Fälle der gewerbsmäßigen{" "}
+              <strong>Umsatzsteuerhinterziehung</strong> (z.B.
               Umsatzsteuerkarussell)
             </li>
           </ul>
           <p className="mt-4">
             Darüber hinaus gibt es auch Steuerordnungswidrigkeiten, wie die
-            **leichtfertige Steuerverkürzung** (§ 378 AO).
+            <strong> leichtfertige Steuerverkürzung</strong> (§ 378 AO).
           </p>
 
           <p className="mt-8 font-semibold">

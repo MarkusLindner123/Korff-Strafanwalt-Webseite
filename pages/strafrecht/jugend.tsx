@@ -37,12 +37,12 @@ const JugendstrafrechtPage = () => {
           <p>
             Das Jugendstrafrecht gilt für Jugendliche im Alter von 14 bis zum
             18. Geburtstag. Unter bestimmten Voraussetzungen kann es aber auch
-            bei sogenannten **Heranwachsenden** im Alter zwischen 18 und 21
-            Jahren angewendet werden. Ob dies der Fall ist, hängt unter anderem
-            vom Reifegrad der Person und der Art der vorgeworfenen Tat ab. Bei
-            Reifeverzögerungen kommt das Jugendstrafrecht zur Anwendung. Dies
-            liegt vor, wenn der Heranwachsende zum Tatzeitpunkt seiner
-            sittlichen und geistigen Entwicklung nach einem Jugendlichen
+            bei sogenannten <strong>Heranwachsenden</strong> im Alter zwischen
+            18 und 21 Jahren angewendet werden. Ob dies der Fall ist, hängt
+            unter anderem vom Reifegrad der Person und der Art der vorgeworfenen
+            Tat ab. Bei Reifeverzögerungen kommt das Jugendstrafrecht zur
+            Anwendung. Dies liegt vor, wenn der Heranwachsende zum Tatzeitpunkt
+            seiner sittlichen und geistigen Entwicklung nach einem Jugendlichen
             gleichstand oder eine typische Jugendverfehlung begangen hat.
           </p>
           <p>
@@ -64,21 +64,22 @@ const JugendstrafrechtPage = () => {
           </p>
           <ul className="list-disc list-inside space-y-2">
             <li>
-              **Erziehungsmaßregeln:** Weisungen, Anordnungen oder
+              <strong>Erziehungsmaßregeln:</strong> Weisungen, Anordnungen oder
               Erziehungshilfen, wie gemeinnützige Arbeit oder die Teilnahme an
               sozialen Kursen.
             </li>
             <li>
-              **Zuchtmittel:** Verwarnung, die Erteilung von Auflagen (z.B.
-              Sozialstunden) und der Jugendarrest. Der Jugendarrest
-              unterscheidet sich in Freizeitarrest, Kurzarrest und Dauerarrest.
+              <strong>Zuchtmittel:</strong> Verwarnung, die Erteilung von
+              Auflagen (z.B. Sozialstunden) und der Jugendarrest. Der
+              Jugendarrest unterscheidet sich in Freizeitarrest, Kurzarrest und
+              Dauerarrest.
             </li>
             <li>
-              **Jugendstrafe:** Die Jugendstrafe stellt die schärfste Sanktion
-              dar. Sie wird verhängt, wenn Erziehungsmaßregeln oder Zuchtmittel
-              nicht mehr ausreichen. Die Mindeststrafe beträgt sechs Monate, die
-              Höchststrafe fünf Jahre bei einem Vergehen und zehn Jahre bei
-              einem Verbrechen.
+              <strong>Jugendstrafe:</strong> Die Jugendstrafe stellt die
+              schärfste Sanktion dar. Sie wird verhängt, wenn
+              Erziehungsmaßregeln oder Zuchtmittel nicht mehr ausreichen. Die
+              Mindeststrafe beträgt sechs Monate, die Höchststrafe fünf Jahre
+              bei einem Vergehen und zehn Jahre bei einem Verbrechen.
             </li>
           </ul>
 

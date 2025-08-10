@@ -34,10 +34,10 @@ const InformationenIndexPage = () => {
             Strafverteidigers eine erste Hilfestellung bieten.
           </p>
           <p>
-            Zu den wichtigsten Grundsätzen gehört es, **niemals ohne
-            Aktenkenntnis und Rücksprache mit einem Anwalt eine Aussage zu
-            machen**. Dieser entscheidende Tipp ist der erste Schritt zu einer
-            erfolgreichen Verteidigungsstrategie.
+            Zu den wichtigsten Grundsätzen gehört es, niemals ohne Aktenkenntnis
+            und Rücksprache mit einem Anwalt eine Aussage zu machen. Dieser
+            entscheidende Tipp ist der erste Schritt zu einer erfolgreichen
+            Verteidigungsstrategie.
           </p>
           <p>
             Unsere Ratgeberseiten beleuchten verschiedene Situationen, denen Sie
@@ -45,11 +45,9 @@ const InformationenIndexPage = () => {
             Sie sich verhalten sollten:
           </p>
           <ul className="list-disc list-inside space-y-2">
-            <li>Was tun bei einer **polizeilichen Vorladung**?</li>
-            <li>Welche Rechte haben Sie bei einer **Hausdurchsuchung**?</li>
-            <li>
-              Verhalten bei einer **Festnahme** oder in **Untersuchungshaft**
-            </li>
+            <li>Was tun bei einer polizeilichen Vorladung?</li>
+            <li>Welche Rechte haben Sie bei einer Hausdurchsuchung?</li>
+            <li>Verhalten bei einer Festnahme oder in Untersuchungshaft</li>
           </ul>
           <p className="mt-8">
             Die hier bereitgestellten Informationen ersetzen keinesfalls eine

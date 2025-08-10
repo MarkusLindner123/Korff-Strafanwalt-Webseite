@@ -49,9 +49,11 @@ const Header = () => {
             href="tel:+493085479867"
             className="flex items-center text-korff-secondary hover:text-korff-primary transition-colors"
           >
-            <img
+            <Image
               src="/images/phone-icon.svg"
               alt="Telefon-Icon"
+              width={20}
+              height={20}
               className="h-5 w-5 mr-2"
             />
           </a>
@@ -218,9 +220,11 @@ const Header = () => {
         <div className="hidden md:block ml-auto">
           <div className="p-2 bg-white rounded-lg shadow-lg">
             <div className="flex items-center space-x-2">
-              <img
+              <Image
                 src="/images/phone-icon.svg"
                 alt="Telefon-Icon"
+                width={20}
+                height={20}
                 className="h-5 w-5 mr-1"
               />
               <p className="text-korff-text text-sm font-semibold">Termine:</p>

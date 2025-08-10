@@ -48,10 +48,10 @@ const SexualstrafrechtPage = () => {
           <p>
             Gerade in Verteidigungen im Bereich des Sexualstrafrechts ist darauf
             zu achten, dass sie frei von Vorurteilen geführt wird und dass die
-            **Unschuldsvermutung** gemäß Artikel 6 Abs. 2 EMRK nicht aus den
-            Augen verloren wird. Aufgrund medialer Berichterstattung gewinnt man
-            oft den Eindruck, dass die Unschuldsvermutung in derartigen
-            Verfahren nicht mehr gilt.
+            <strong>Unschuldsvermutung</strong> gemäß Artikel 6 Abs. 2 EMRK
+            nicht aus den Augen verloren wird. Aufgrund medialer
+            Berichterstattung gewinnt man oft den Eindruck, dass die
+            Unschuldsvermutung in derartigen Verfahren nicht mehr gilt.
           </p>
 
           <h3 className="mt-8 text-xl font-bold text-gray-800">
