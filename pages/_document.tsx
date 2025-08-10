@@ -33,12 +33,12 @@ export default function Document() {
         />
 
         {/* Autor der Webseite, hier der Name des Anwalts oder der Kanzlei. */}
-        <meta name="author" content="[Name des Anwalts / der Kanzlei]" />
+        <meta name="author" content="Daniel Korff" />
 
         {/* Open Graph Tags für die Vorschau beim Teilen in sozialen Medien wie Facebook oder WhatsApp. */}
         <meta
           property="og:title"
-          content="[Name des Anwalts] - Ihr Strafverteidiger in Berlin"
+          content="Daniel Korff - Ihr Strafverteidiger in Berlin"
         />
         <meta
           property="og:description"
