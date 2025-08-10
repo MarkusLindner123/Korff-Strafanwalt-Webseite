@@ -15,7 +15,7 @@ const services = [
     description:
       "Erhalten Sie einen Überblick über den Ablauf eines Strafverfahrens, Ihre Rechte als Beschuldigter oder Opfer und wichtige Fristen.",
     icon: "📄",
-    href: "/information", // Der Link wurde angepasst
+    href: "/informationen", // Der Link wurde angepasst
   },
   {
     title: "Kontakt & Notruf",
