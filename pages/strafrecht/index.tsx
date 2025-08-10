@@ -3,10 +3,9 @@ import Link from "next/link";
 import Head from "next/head";
 
 // Wichtige Anmerkung:
-// Die Importpfade wurden korrigiert, um direkt auf die .tsx-Dateien zu verweisen.
-import Header from "../../components/Header/Header";
+// Die Imports für Header und Footer werden entfernt, da sie nun über die Layout-Komponente bereitgestellt werden.
+import Layout from "../../components/Layout/Layout";
 import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
 
 // Annahme: Es existiert eine wiederverwendbare Kontaktsektion-Komponente
 // an diesem Pfad. Bitte passen Sie den Pfad an, falls er in Ihrem Projekt anders ist.
@@ -79,7 +78,7 @@ const StrafrechtPage = () => {
   ];
 
   return (
-    <>
+    <Layout>
       {/* Setzt den Seitentitel für SEO */}
       <Head>
         <title>Strafrecht | Fachanwälte für Strafrecht in Berlin</title>
@@ -88,8 +87,6 @@ const StrafrechtPage = () => {
           content="Ihre Experten für Strafrecht in Berlin. Wir verteidigen Sie in allen Bereichen des Strafrechts."
         />
       </Head>
-
-      <Header />
 
       {/* Page Header mit Titel und Untertitel */}
       <PageHeader title="Fachanwälte für Strafrecht" />
@@ -150,9 +147,7 @@ const StrafrechtPage = () => {
 
       {/* Die Kontaktsektion wird nun direkt importiert und angezeigt */}
       <ContactSection />
-
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

@@ -1,19 +1,17 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link"; // 'Link' wird hier verwendet und bleibt
+import Link from "next/link"; // 'Link' wird für interne Links im Text benötigt
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Importieren der globalen Layout-Komponente
+import Layout from "../../components/Layout/Layout";
 
-// Die neue Layout-Komponente für Unterseiten
+// Importieren der spezifischen Layout-Komponente für Strafrecht-Unterseiten,
+// die nun Header, Footer, PageHeader und ContactSection enthält
 import StrafrechtSubPageLayout from "../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
 const BeamtenstrafrechtPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Beamten- und Soldatenstrafrecht | Kanzlei Korff</title>
         <meta
@@ -22,10 +20,8 @@ const BeamtenstrafrechtPage = () => {
         />
       </Head>
 
-      <Header />
-
-      <PageHeader title="Beamten- / Soldatenstrafrecht" />
-
+      {/* Das StrafrechtSubPageLayout umschließt den Inhalt und rendert
+          PageHeader & ContactSection intern. Der Titel wird nun vom Layout-Component selbst ermittelt. */}
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
           <p className="font-semibold text-gray-900 mb-6">
@@ -43,12 +39,12 @@ const BeamtenstrafrechtPage = () => {
           <ul className="list-disc list-inside space-y-2">
             <li>
               <strong>Delikte im Amt:</strong> Vorteilsnahme, Bestechlichkeit,
-              Bestechung (§§ 331, 332, 334 StGB) und Körperverletzung im Amt (§
-              340 StGB).
+              Bestechung (&sect;&sect; 331, 332, 334 StGB) und Körperverletzung
+              im Amt (&sect; 340 StGB).
             </li>
             <li>
-              <strong>Allgemeine Delikte:</strong> Untreue (§ 266 StGB) und
-              Betrug (§ 263 StGB).
+              <strong>Allgemeine Delikte:</strong> Untreue (&sect; 266 StGB) und
+              Betrug (&sect; 263 StGB).
             </li>
           </ul>
 
@@ -83,10 +79,7 @@ const BeamtenstrafrechtPage = () => {
           </p>
         </div>
       </StrafrechtSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

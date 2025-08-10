@@ -2,18 +2,15 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Globale Layout-Komponente
+import Layout from "../../components/Layout/Layout";
 
-// Die neue Layout-Komponente für Unterseiten
+// Die spezifische Layout-Komponente für Unterseiten
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
 const ErmittlungsverfahrenPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Ermittlungsverfahren | Kanzlei Korff</title>
         <meta
@@ -21,10 +18,6 @@ const ErmittlungsverfahrenPage = () => {
           content="Verhalten im Ermittlungsverfahren: Wie Sie sich bei einer Vorladung, Festnahme oder Hausdurchsuchung richtig verhalten."
         />
       </Head>
-
-      <Header />
-
-      <PageHeader title="Ermittlungsverfahren" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
@@ -86,10 +79,7 @@ const ErmittlungsverfahrenPage = () => {
           </p>
         </div>
       </InformationenSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

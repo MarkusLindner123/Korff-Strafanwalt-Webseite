@@ -2,18 +2,19 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Die Haupt-Layout-Komponente, die Header und Footer bereitstellt
+import Layout from "../../components/Layout/Layout";
 
-// Die neue Layout-Komponente für Unterseiten
+// Die spezifische Layout-Komponente für die Strafrecht-Unterseiten,
+// die jetzt PageHeader und ContactSection enthält
 import StrafrechtSubPageLayout from "../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
+
+// Die anderen Komponenten werden nicht mehr direkt importiert, da sie
+// nun in StrafrechtSubPageLayout gerendert werden.
 
 const AllgemeinesStrafrechtPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Allgemeines Strafrecht | Kanzlei Korff</title>
         <meta
@@ -22,10 +23,7 @@ const AllgemeinesStrafrechtPage = () => {
         />
       </Head>
 
-      <Header />
-
-      <PageHeader title="Allgemeines Strafrecht" />
-
+      {/* Die StrafrechtSubPageLayout-Komponente umschließt nur den spezifischen Inhalt */}
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
           <p className="font-semibold text-gray-900 mb-6">
@@ -56,14 +54,14 @@ const AllgemeinesStrafrechtPage = () => {
             Häufige Delikte im Allgemeinen Strafrecht:
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li>Diebstahl (&sect;&sect; 242 ff. StGB)</li>
-            <li>Betrug (&sect;&sect; 263 ff. StGB)</li>
-            <li>Urkundenfälschung (&sect; 267 StGB)</li>
-            <li>Körperverletzung (&sect;&sect; 223 ff. StGB)</li>
-            <li>Tötungsdelikte (&sect;&sect; 211 ff. StGB)</li>
-            <li>Sachbeschädigung (&sect; 303 StGB)</li>
-            <li>Nötigung (&sect; 240 StGB)</li>
-            <li>Hausfriedensbruch (&sect; 123 StGB)</li>
+            <li>Diebstahl (§§ 242 ff. StGB)</li>
+            <li>Betrug (§§ 263 ff. StGB)</li>
+            <li>Urkundenfälschung (§ 267 StGB)</li>
+            <li>Körperverletzung (§§ 223 ff. StGB)</li>
+            <li>Tötungsdelikte (§§ 211 ff. StGB)</li>
+            <li>Sachbeschädigung (§ 303 StGB)</li>
+            <li>Nötigung (§ 240 StGB)</li>
+            <li>Hausfriedensbruch (§ 123 StGB)</li>
           </ul>
 
           <p className="mt-8 font-semibold">
@@ -80,10 +78,7 @@ const AllgemeinesStrafrechtPage = () => {
           </p>
         </div>
       </StrafrechtSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

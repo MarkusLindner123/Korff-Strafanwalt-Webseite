@@ -1,19 +1,17 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
+import Link from "next/link"; // 'Link' wird für interne Links im Text benötigt
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Importieren der globalen Layout-Komponente, die den Header und Footer enthält
+import Layout from "../../components/Layout/Layout";
 
-// Die neue Layout-Komponente für Unterseiten
+// Importieren der spezifischen Layout-Komponente für Strafrecht-Unterseiten,
+// die PageHeader und ContactSection intern rendert
 import StrafrechtSubPageLayout from "../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
 const BetaeubungsmittelPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Drogenstrafrecht | Kanzlei Korff</title>
         <meta
@@ -22,10 +20,9 @@ const BetaeubungsmittelPage = () => {
         />
       </Head>
 
-      <Header />
-
-      <PageHeader title="Drogenstrafrecht" />
-
+      {/* Das StrafrechtSubPageLayout umschließt den spezifischen Inhalt
+          und rendert PageHeader & ContactSection intern.
+          Der Titel wird nun vom Layout-Component selbst ermittelt. */}
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
           <p className="font-semibold text-gray-900 mb-6">
@@ -116,10 +113,7 @@ const BetaeubungsmittelPage = () => {
           </p>
         </div>
       </StrafrechtSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

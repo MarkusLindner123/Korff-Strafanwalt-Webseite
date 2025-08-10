@@ -1,14 +1,17 @@
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image"; // Import des Image-Komponenten von Next.js
+import Image from "next/image";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+const basePath = publicRuntimeConfig?.basePath || "";
 
 const Header = () => {
-  // States for the mobile menu view and dropdowns
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [strafrechtDropdownOpen, setStrafrechtDropdownOpen] = useState(false);
   const [infoDropdownOpen, setInfoDropdownOpen] = useState(false);
 
-  // Handler to toggle the main menu. Also closes dropdowns for a clean state.
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
@@ -17,7 +20,6 @@ const Header = () => {
     }
   };
 
-  // Handlers for the mobile dropdowns
   const toggleStrafrechtDropdown = () => {
     setStrafrechtDropdownOpen(!strafrechtDropdownOpen);
   };
@@ -28,36 +30,33 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md z-50 font-['Inter']">
-      {/* Container for desktop and mobile navigation */}
       <nav className="container mx-auto flex items-center p-4">
-        {/* Logo als Bild */}
+        {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/logo-korff.png"
+            src={`${basePath}/images/logo-korff.png`}
             alt="Kanzlei Korff Logo"
-            width={150} // Basisbreite für Desktop
-            height={40} // Basishöhe für Desktop
+            width={150}
+            height={40}
             className="h-10 w-auto md:h-12 cursor-pointer"
-            priority // Optimierte Ladezeit
+            priority
           />
         </Link>
 
-        {/* Mobile-only elements: Phone icon and Hamburger button */}
+        {/* Mobile Header */}
         <div className="flex items-center space-x-4 md:hidden ml-auto">
-          {/* Phone Link */}
           <a
             href="tel:+493085479867"
             className="flex items-center text-korff-secondary hover:text-korff-primary transition-colors"
           >
             <Image
-              src="/images/phone-icon.svg"
+              src={`${basePath}/images/phone-icon.svg`}
               alt="Telefon-Icon"
               width={20}
               height={20}
               className="h-5 w-5 mr-2"
             />
           </a>
-          {/* Hamburger Menu Button */}
           <button
             onClick={toggleMenu}
             className="text-korff-primary text-2xl focus:outline-none"
@@ -71,7 +70,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Desktop navigation (hidden on mobile) */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex md:items-center md:space-x-6 ml-10">
           <Link href="/kanzlei">
             <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer">
@@ -79,7 +78,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Strafrecht Dropdown for Desktop */}
+          {/* Strafrecht Dropdown */}
           <div className="relative group z-50">
             <Link href="/strafrecht">
               <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer flex items-center">
@@ -162,7 +161,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Informationen Dropdown for Desktop */}
+          {/* Informationen Dropdown */}
           <div className="relative group z-50">
             <Link href="/informationen">
               <div className="text-korff-text hover:text-korff-primary transition-colors cursor-pointer flex items-center">
@@ -216,12 +215,12 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Desktop phone number box */}
+        {/* Desktop Telefonnummer */}
         <div className="hidden md:block ml-auto">
           <div className="p-2 bg-white rounded-lg shadow-lg">
             <div className="flex items-center space-x-2">
               <Image
-                src="/images/phone-icon.svg"
+                src={`${basePath}/images/phone-icon.svg`}
                 alt="Telefon-Icon"
                 width={20}
                 height={20}
@@ -239,7 +238,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu (collapsible) */}
+      {/* Mobile Menü */}
       <div
         className={`md:hidden ${
           isMenuOpen ? "block" : "hidden"
@@ -252,7 +251,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Mobile Dropdown for 'Strafrecht' */}
+          {/* Mobile Strafrecht */}
           <div className="relative">
             <div className="flex justify-between items-center border-b pb-2">
               <Link href="/strafrecht" onClick={toggleMenu}>
@@ -325,7 +324,7 @@ const Header = () => {
             )}
           </div>
 
-          {/* Mobile Dropdown for 'Informationen' */}
+          {/* Mobile Informationen */}
           <div className="relative">
             <div className="flex justify-between items-center border-b pb-2">
               <Link href="/informationen" onClick={toggleMenu}>

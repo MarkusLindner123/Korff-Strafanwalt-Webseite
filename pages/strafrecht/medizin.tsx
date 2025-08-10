@@ -2,18 +2,16 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-// Globale Komponenten
-import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
-import ContactSection from "../../components/ContactSection/ContactSection";
+// Importieren der globalen Layout-Komponente
+import Layout from "../../components/Layout/Layout";
 
-// Die neue Layout-Komponente für Unterseiten
+// Importieren der spezifischen Layout-Komponente für Strafrecht-Unterseiten
+// Diese übernimmt jetzt das Rendering von PageHeader, ContactSection und Footer.
 import StrafrechtSubPageLayout from "../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
 const MedizinStrafrechtPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Medizin-/Arztstrafrecht | Kanzlei Korff</title>
         <meta
@@ -22,10 +20,9 @@ const MedizinStrafrechtPage = () => {
         />
       </Head>
 
-      <Header />
-
-      <PageHeader title="Medizin-/Arztstrafrecht" />
-
+      {/* Die StrafrechtSubPageLayout-Komponente umschließt den gesamten Seiteninhalt.
+          Sie kümmert sich um das Rendering von PageHeader, der Seitennavigation und der ContactSection.
+          Der Titel wird vom Layout-Component selbst ermittelt. */}
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
           <p className="font-semibold text-gray-900 mb-6">
@@ -58,27 +55,27 @@ const MedizinStrafrechtPage = () => {
           </h3>
           <ul className="list-disc list-inside space-y-2">
             <li>
-              <strong>Fahrlässige Tötung</strong> (&sect; 222 StGB) nach
+              <strong>Fahrlässige Tötung</strong> (§ 222 StGB) nach
               Behandlungsfehlern
             </li>
             <li>
-              <strong>Fahrlässige Körperverletzung</strong> (&sect; 229 StGB)
-              nach Behandlungsfehlern
+              <strong>Fahrlässige Körperverletzung</strong> (§ 229 StGB) nach
+              Behandlungsfehlern
             </li>
             <li>
               <strong>Abrechnungsbetrug</strong>
             </li>
             <li>
               <strong>Korruptionsdelikte</strong> wie Bestechung und
-              Bestechlichkeit im Gesundheitswesen (&sect;&sect; 299a, 299b StGB)
+              Bestechlichkeit im Gesundheitswesen (§§ 299a, 299b StGB)
             </li>
             <li>
               <strong>Dokumentationsdelikte</strong> (z.B. falsche
               Patienten-/Krankenunterlagen)
             </li>
             <li>
-              <strong>Verletzung der ärztlichen Schweigepflicht</strong> (&sect;
-              203 StGB)
+              <strong>Verletzung der ärztlichen Schweigepflicht</strong> (§ 203
+              StGB)
             </li>
           </ul>
 
@@ -95,10 +92,7 @@ const MedizinStrafrechtPage = () => {
           </p>
         </div>
       </StrafrechtSubPageLayout>
-
-      <ContactSection />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 
