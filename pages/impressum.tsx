@@ -1,10 +1,11 @@
 import React from "react";
+import Layout from "../components/Layout/Layout";
 
 // Die Impressumsseite verwendet das gleiche Layout wie die Datenschutzerklärung,
 // um Header und Footer zu integrieren.
 const Impressum = () => {
   return (
-    <>
+    <Layout>
       <div className="container mx-auto p-8 max-w-4xl">
         <h1 className="text-3xl font-bold mb-6 text-gray-900">Impressum</h1>
         <p className="mb-4">Angaben gemäß § 5 TMG.</p>
@@ -112,7 +113,7 @@ const Impressum = () => {
 
         <p className="text-sm text-gray-500 mt-8">Stand: [aktuelles Datum]</p>
       </div>
-    </>
+    </Layout>
   );
 };
 

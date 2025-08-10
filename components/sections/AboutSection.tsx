@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { useI18n } from "../../lib/i18n/I18nProvider";
 
 const AboutSection = () => {
-  const { t } = useI18n();
   return (
+    // Hintergrund der Sektion verwendet jetzt eine graue Farbe für subtilen Kontrast
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+        {/* Bild-Container */}
         <div className="md:w-1/2">
+          {/* Bild mit abgerundeten Ecken, starkem Schatten und einem subtilen Hover-Effekt */}
           <img
             src="/images/about-kanzlei.jpg"
             alt="Kanzlei Korff in Berlin"
@@ -15,16 +16,26 @@ const AboutSection = () => {
           />
         </div>
 
+        {/* Text-Container */}
         <div className="md:w-1/2">
+          {/* Die Überschrift verwendet jetzt die primäre Farbe aus der globals.css */}
           <h2 className="text-4xl md:text-5xl font-extrabold leading-snug tracking-tight text-[var(--korff-primary)] mb-6">
-            {t("home.about.title")}
+            Kanzlei Korff: Ihr Anwalt in Berlin
           </h2>
+          {/* Der Fließtext verwendet die definierte Textfarbe */}
           <p className="text-lg text-[var(--korff-text)] mb-8">
-            {t("home.about.paragraph1")}
+            Als erfahrene Anwaltskanzlei in Berlin-Mitte stehen wir für
+            fundierte juristische Beratung und entschlossene
+            Interessenvertretung. Unser Fokus liegt auf der Strafverteidigung
+            und dem Einsatz für die Rechte unserer Mandanten. Wir verstehen die
+            Dringlichkeit und Sensibilität Ihrer Situation und bieten Ihnen eine
+            kompetente und vertrauensvolle Begleitung in jeder Phase Ihres
+            Verfahrens.
           </p>
           <Link href="/kanzlei">
-            <button className="btn-primary-rounded">
-              {t("home.about.cta")}
+            {/* Der Button verwendet nun die sekundäre Akzentfarbe und die primäre Farbe für den Hover-Effekt */}
+            <button className="px-8 py-4 bg-[var(--korff-secondary)] text-white font-bold rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-[var(--korff-primary)] focus:outline-none focus:ring-4 focus:ring-[var(--korff-secondary)] focus:ring-opacity-50">
+              Mehr über uns
             </button>
           </Link>
         </div>

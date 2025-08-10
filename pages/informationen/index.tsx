@@ -3,7 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 
 // Globale Komponenten
+import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
@@ -17,6 +19,8 @@ const InformationenIndexPage = () => {
           content="Wichtige rechtliche Informationen und erste Ratschläge für Betroffene in einem Strafverfahren."
         />
       </Head>
+
+      <Header />
 
       <PageHeader title="Wichtige Informationen" />
 
@@ -47,7 +51,7 @@ const InformationenIndexPage = () => {
           </ul>
           <p className="mt-8">
             Die hier bereitgestellten Informationen ersetzen keinesfalls eine
-            individuelle Rechtsberatung. Nehmen Sie so schnell wie möglich {""}
+            individuelle Rechtsberatung. Nehmen Sie so schnell wie möglich{" "}
             <Link
               href="/kontakt"
               className="text-red-600 hover:text-red-800 transition-colors"
@@ -60,6 +64,7 @@ const InformationenIndexPage = () => {
       </InformationenSubPageLayout>
 
       <ContactSection />
+      <Footer />
     </>
   );
 };

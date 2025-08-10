@@ -18,19 +18,16 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Definition der Spin-Animation für das Ladesymbol */
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.animate-spin { animation: spin 1s linear infinite; }
-
-/* Centralized component classes */
-@layer components {
-  .btn-primary-rounded {
-    @apply px-8 py-4 bg-[var(--korff-secondary)] text-white font-bold rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:bg-[var(--korff-primary)] focus:outline-none focus:ring-4 focus:ring-[var(--korff-secondary)] focus:ring-opacity-50;
-  }
-  .btn-primary-rounded-sm {
-    @apply px-6 py-3 bg-[var(--korff-secondary)] text-white font-bold rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl hover:bg-[var(--korff-primary)] focus:outline-none focus:ring-4 focus:ring-[var(--korff-secondary)] focus:ring-opacity-50;
-  }
+.animate-spin {
+  animation: spin 1s linear infinite;
 }

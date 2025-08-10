@@ -3,19 +3,28 @@ import Head from "next/head";
 import Link from "next/link";
 
 // Globale Komponenten
+import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
+
+// Die neue Layout-Komponente für Unterseiten
 import StrafrechtSubPageLayout from "../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
 const BetaeubungsmittelPage = () => {
   return (
     <>
       <Head>
-        <title>Betäubungsmittelstrafrecht | Kanzlei Korff</title>
-        <meta name="description" content="Verteidigung im Betäubungsmittelstrafrecht." />
+        <title>Drogenstrafrecht | Kanzlei Korff</title>
+        <meta
+          name="description"
+          content="Spezialisierte Verteidigung im Betäubungsmittelstrafrecht. Wir beraten Sie bei Drogenbesitz, -handel und allen relevanten Delikten nach dem BtMG."
+        />
       </Head>
 
-      <PageHeader title="Betäubungsmittelstrafrecht" />
+      <Header />
+
+      <PageHeader title="Drogenstrafrecht" />
 
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
@@ -109,6 +118,7 @@ const BetaeubungsmittelPage = () => {
       </StrafrechtSubPageLayout>
 
       <ContactSection />
+      <Footer />
     </>
   );
 };
