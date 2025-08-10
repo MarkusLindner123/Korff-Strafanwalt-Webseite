@@ -13,6 +13,71 @@ import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
 const StrafrechtPage = () => {
+  const practiceAreas = [
+    {
+      title: "Allgemeines Strafrecht",
+      description: "(Diebstahl, Betrug, Nötigung, Körperverletzung, etc.)",
+      href: "/strafrecht/allgemein",
+      icon: "⚖️",
+    },
+    {
+      title: "Beamtenstrafrecht / Soldatenstrafrecht",
+      description: "",
+      href: "/strafrecht/beamten",
+      icon: "👮",
+    },
+    {
+      title: "Betäubungsmittelstrafrecht",
+      description: "(Drogenbesitz, Drogenhandel, BtMG)",
+      href: "/strafrecht/betaeubungsmittel",
+      icon: "🌿",
+    },
+    {
+      title: "Jugendstrafrecht",
+      description: "",
+      href: "/strafrecht/jugend",
+      icon: "👦",
+    },
+    {
+      title: "Medizin- / Arztstrafrecht",
+      description:
+        "(Fahrlässige Tötung, fahrlässige Körperverletzung wg. „Kunstfehler“, Abrechnungsbetrug)",
+      href: "/strafrecht/medizin",
+      icon: "⚕️",
+    },
+    {
+      title: "Rechtsmittelverteidigung",
+      description: "",
+      href: "/strafrecht/rechtsmittel",
+      icon: "📜",
+    },
+    {
+      title: "Sexualstrafrecht",
+      description: "",
+      href: "/strafrecht/sexual",
+      icon: "🛡️",
+    },
+    {
+      title: "Steuerstrafrecht",
+      description: "(Steuerhinterziehung, Steuerverkürzung, Selbstanzeige)",
+      href: "/strafrecht/steuer",
+      icon: "💰",
+    },
+    {
+      title: "Verkehrsstrafrecht",
+      description:
+        "(Fahren ohne Fahrerlaubnis, Trunkenheitsfahrt, Unfallflucht)",
+      href: "/strafrecht/verkehr",
+      icon: "🚗",
+    },
+    {
+      title: "Wirtschaftsstrafrecht",
+      description: "(Insolvenzverschleppung, Untreue, Bankrott, Schwarzarbeit)",
+      href: "/strafrecht/wirtschaft",
+      icon: "💼",
+    },
+  ];
+
   return (
     <>
       {/* Setzt den Seitentitel für SEO */}
@@ -31,7 +96,7 @@ const StrafrechtPage = () => {
 
       {/* Hauptinhalt */}
       <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto text-lg text-korff-text space-y-6">
+        <div className="max-w-4xl mx-auto text-lg text-[var(--korff-text)] space-y-6">
           <p>
             Wir schöpfen immer alle Möglichkeiten aus, um eine öffentliche
             Gerichtsverhandlung zu vermeiden und wenn irgend möglich bereits im
@@ -51,128 +116,35 @@ const StrafrechtPage = () => {
             Wir scheuen aber auch die harte Auseinandersetzung nicht und wann
             immer es nötig ist, kämpfen wir mit allen legalen Mitteln für die
             Rechte unserer Mandanten – wenn es sein muss durch alle Instanzen.
-            Ein besonderer Schwerpunkt unserer Kanzlei ist die
-            **Rechtsmittelverteidigung**.
+            Ein besonderer Schwerpunkt unserer Kanzlei ist die{" "}
+            {/* Markdown-Syntax wurde durch ein <strong>-Tag ersetzt */}
+            <strong>Rechtsmittelverteidigung</strong>.
           </p>
-          <h2 className="text-2xl font-bold text-korff-primary mt-12 mb-4">
+          <h2 className="text-2xl font-bold text-[var(--korff-primary)] mt-12 mb-4">
             Wir verteidigen Sie erfolgreich u. a. in folgenden Fällen:
           </h2>
-          {/* Liste der Fachgebiete, alphabetisch sortiert */}
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-            <li>
-              <Link href="/strafrecht/allgemein">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Allgemeines Strafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text">
-                    (Diebstahl, Betrug, Nötigung, Körperverletzung, etc.)
-                  </p>
+          {/* Das Grid-Layout wurde so angepasst, dass alle Boxen die gleiche Höhe haben */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            {practiceAreas.map((area, index) => (
+              <Link key={index} href={area.href} className="h-full">
+                <div className="h-full bg-white p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl cursor-pointer">
+                  <div className="flex items-start h-full">
+                    <span className="text-4xl mr-4">{area.icon}</span>
+                    <div className="flex flex-col h-full">
+                      <h3 className="text-xl font-bold text-[var(--korff-primary)]">
+                        {area.title}
+                      </h3>
+                      {area.description && (
+                        <p className="mt-1 text-sm text-[var(--korff-text)]">
+                          {area.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/beamten">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Beamtenstrafrecht / Soldatenstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text"></p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/betaeubungsmittel">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Betäubungsmittelstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text">
-                    (Drogenbesitz, Drogenhandel, BtMG)
-                  </p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/jugend">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Jugendstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text"></p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/medizin">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Medizin- / Arztstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text">
-                    (Fahrlässige Tötung, fahrlässige Körperverletzung wg.
-                    „Kunstfehler“, Abrechnungsbetrug)
-                  </p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/rechtsmittel">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Rechtsmittelverteidigung
-                  </h3>
-                  <p className="text-sm text-korff-text"></p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/sexual">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Sexualstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text"></p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/steuer">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Steuerstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text">
-                    (Steuerhinterziehung, Steuerverkürzung, Selbstanzeige)
-                  </p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/verkehr">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Verkehrsstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text">
-                    (Fahren ohne Fahrerlaubnis, Trunkenheitsfahrt, Unfallflucht)
-                  </p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/strafrecht/wirtschaft">
-                <div className="hover:bg-gray-50 p-4 rounded-lg transition-colors cursor-pointer">
-                  <h3 className="text-xl font-semibold text-korff-primary">
-                    Wirtschaftsstrafrecht
-                  </h3>
-                  <p className="text-sm text-korff-text">
-                    (Insolvenzverschleppung, Untreue, Bankrott, Schwarzarbeit)
-                  </p>
-                </div>
-              </Link>
-            </li>
-          </ul>
+            ))}
+          </div>
         </div>
       </main>
 

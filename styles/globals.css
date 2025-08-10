@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --korff-primary: #0f172a; /* Ein dunkles Blaugrau für Hauptakzente */
-  --korff-secondary: #0d9488; /* Ein Petrol-Ton für Akzente und Links */
-  --korff-background: #f1f5f9; /* Ein sehr helles Graublau als Hintergrund */
-  --korff-text: #1e293b; /* Ein dunkler Text, der gut lesbar ist */
+  --korff-primary: #0f172a;
+  --korff-secondary: #0d9488;
+  --korff-background: #f1f5f9;
+  --korff-text: #1e293b;
 }
 
 body {
@@ -16,4 +16,18 @@ body {
 
 .font-sans {
   font-family: var(--font-sans);
+}
+
+/* Definition der Spin-Animation für das Ladesymbol */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
