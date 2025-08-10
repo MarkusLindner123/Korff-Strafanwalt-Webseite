@@ -50,7 +50,7 @@ const Header = () => {
             className="flex items-center text-korff-secondary hover:text-korff-primary transition-colors"
           >
             <Image
-              src="images/phone-icon.svg"
+              src="/images/phone-icon.svg"
               alt="Telefon-Icon"
               width={20}
               height={20}
