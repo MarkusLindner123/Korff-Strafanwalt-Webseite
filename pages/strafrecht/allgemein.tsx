@@ -18,98 +18,69 @@ const AllgemeinesStrafrechtPage = () => {
         <title>Allgemeines Strafrecht | Kanzlei Korff</title>
         <meta
           name="description"
-          content="Verteidigung bei 'Alltagskriminalität': Diebstahl, Betrug, Nötigung und anderen Delikten des allgemeinen Strafrechts."
+          content="Umfassende Verteidigung im Allgemeinen Strafrecht. Wir verteidigen Sie bei Diebstahl, Betrug, Körperverletzung, Sachbeschädigung und weiteren Delikten."
         />
       </Head>
 
-      {/* Die Hauptfarbe der Palette wird für den Header verwendet */}
       <Header />
 
-      {/* PageHeader mit Textfarbe der Hauptfarbe */}
       <PageHeader title="Allgemeines Strafrecht" />
 
       <StrafrechtSubPageLayout>
         <div className="prose max-w-none text-lg text-gray-700">
           <p className="font-semibold text-gray-900 mb-6">
-            Wir verteidigen Sie umfassend in allen Bereichen der sogenannten
-            'Alltagskriminalität', von Verkehrsdelikten über Diebstahl bis hin
-            zu Körperverletzungsdelikten.
+            Das allgemeine Strafrecht befasst sich mit den klassischen Delikten
+            des Strafgesetzbuches (StGB). Die Kanzlei Korff berät und verteidigt
+            Sie in allen Phasen des Verfahrens.
           </p>
           <p>
-            Unter dem Begriff **Allgemeines Strafrecht** wird gemeinhin die
-            „Alltagskriminalität“ verstanden. So werden etwa Verkehrsdelikte,
-            Körperverletzungen und Diebstahl unter das allgemeine Strafrecht
-            gefasst.
+            Im strafrechtlichen Ermittlungsverfahren stehen sich Beschuldigter
+            und Staatsanwaltschaft bzw. Polizei gegenüber. In diesem Kampf
+            befindet sich der Beschuldigte, der mit den juristischen Regeln
+            meist nicht vertraut ist, in einer schlechten Ausgangslage. Als
+            Anwalt für Strafrecht und Strafverteidiger ist es unsere Aufgabe,
+            die Waffengleichheit wiederherzustellen und Ihre Interessen mit
+            Nachdruck zu vertreten.
           </p>
-
           <p>
-            Neben den Fragen, welcher Straftatbestand einschlägig sein kann,
-            betrifft das allgemeine Strafrecht auch Fragen zu Vorsatz oder
-            Fahrlässigkeit, Täterschaft oder Teilnahme, Beihilfe, Notwehr oder
-            Notstand. Eine vertiefte Kenntnis dieser Bestimmungen und der hierzu
-            ergangenen Rechtsprechung ist grundsätzliche Voraussetzung für eine
-            erfolgreiche Verteidigung.
+            Zu den wichtigsten Grundsätzen gehört es,{" "}
+            <strong>
+              niemals ohne Aktenkenntnis und Rücksprache mit einem Anwalt eine
+              Aussage zu machen
+            </strong>
+            . Dieser entscheidende Tipp ist der erste Schritt zu einer
+            erfolgreichen Verteidigungsstrategie.
           </p>
 
-          <h3 className="mt-8 text-xl font-bold text-korff-primary">
-            Folgende Vergehen und Verbrechen werden vornehmlich unter den
-            Begriff des allgemeinen Strafrechts gefasst:
+          <h3 className="mt-8 text-xl font-bold text-gray-800">
+            Häufige Delikte im Allgemeinen Strafrecht:
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li>
-              Diebstahl, Ladendiebstahl, Einbruchsdiebstahl, Bandendiebstahl (§§
-              242, 243, 244 ff. StGB)
-            </li>
-            <li>Betrug, gewerbsmäßiger Betrug ( § 263 StGB)</li>
-            <li>Hehlerei (§ 259 StGB)</li>
-            <li>Unterschlagung (§ 246 StGB)</li>
-            <li>Untreue (§ 266 StGB)</li>
-            <li>Erpressung, räuberische Erpressung (§§ 253, 255 StGB)</li>
-            <li>
-              Körperverletzung, gefährliche Körperverletzung, schwere
-              Körperverletzung (§§ 223, 224, 226 StGB)
-            </li>
-            <li>
-              Korruption, Bestechung, Bestechlichkeit, Bestechung im
-              geschäftlichen Verkehr (§§ 299, 332, 334 StGB)
-            </li>
-            <li>Nötigung (§ 240 StGB)</li>
-            <li>Raub, räuberischer Diebstahl (§§ 249, 252 StGB)</li>
-            <li>Sachbeschädigung (§§ 303 ff. StGB)</li>
-            <li>
-              Unerlaubtes Entfernen vom Unfallort – Unfallflucht (§ 142 StGB)
-            </li>
-            <li>Brandstiftung, schwere Brandstiftung (§ 306, 306a StGB)</li>
-            <li>
-              Beleidigung, üble Nachrede, Verleumdung (§§ 185, 186, 187 StGB)
-            </li>
-            <li>
-              Urkundenfälschung, Fälschung technischer Aufzeichnungen (§§ 267,
-              268 StGB)
-            </li>
-            <li>Meineid, uneidliche Falschaussage (§§ 154, 153 StGB)</li>
-            <li>
-              Kapitalstrafsachen wie Totschlag und Mord (§§ 211, 212 StGB)
-            </li>
+            <li>Diebstahl (&sect;&sect; 242 ff. StGB)</li>
+            <li>Betrug (&sect;&sect; 263 ff. StGB)</li>
+            <li>Urkundenfälschung (&sect; 267 StGB)</li>
+            <li>Körperverletzung (&sect;&sect; 223 ff. StGB)</li>
+            <li>Tötungsdelikte (&sect;&sect; 211 ff. StGB)</li>
+            <li>Sachbeschädigung (&sect; 303 StGB)</li>
+            <li>Nötigung (&sect; 240 StGB)</li>
+            <li>Hausfriedensbruch (&sect; 123 StGB)</li>
           </ul>
 
           <p className="mt-8 font-semibold">
-            Die Kenntnis der jeweiligen Mengen nach dem BtMG ist ein
-            unerlässlicher Bestandteil einer erfolgreichen Verteidigung. Nehmen
-            Sie daher frühzeitig{" "}
+            Sollten Sie eine Vorladung als Beschuldigter erhalten haben oder
+            sich in einer anderen strafrechtlichen Situation befinden, nehmen
+            Sie einfach{" "}
             <Link
               href="/kontakt"
-              className="text-korff-primary hover:text-korff-secondary transition-colors"
+              className="text-red-600 hover:text-red-800 transition-colors"
             >
               Kontakt
             </Link>{" "}
-            mit uns auf, um von Anfang an auf das Ermittlungsverfahren Einfluss
-            nehmen zu können.
+            mit uns auf.
           </p>
         </div>
       </StrafrechtSubPageLayout>
 
-      {/* ContactSection mit Hintergrundfarbe und Buttonfarbe aus der Palette */}
       <ContactSection />
       <Footer />
     </>

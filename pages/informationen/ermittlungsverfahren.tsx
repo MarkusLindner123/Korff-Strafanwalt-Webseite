@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 
 // Globale Komponenten
 import Header from "../../components/Header/Header";
@@ -9,115 +8,81 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
-// Die Layout-Komponente für Unterseiten wird korrekt importiert
+// Die neue Layout-Komponente für Unterseiten
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
-// Die Komponente für die Ermittlungsverfahren-Seite
-const ErmittlungsverfahrenPage: React.FC = () => {
+const ErmittlungsverfahrenPage = () => {
   return (
     <>
       <Head>
-        <title>Ermittlungsverfahren in Berlin | Kanzlei Korff</title>
+        <title>Ermittlungsverfahren | Kanzlei Korff</title>
         <meta
           name="description"
-          content="Ein Ermittlungsverfahren wurde gegen Sie eingeleitet? Erfahren Sie, wie Sie sich in Berlin richtig verhalten und wie Rechtsanwalt Korff Sie vertritt."
+          content="Verhalten im Ermittlungsverfahren: Wie Sie sich bei einer Vorladung, Festnahme oder Hausdurchsuchung richtig verhalten."
         />
       </Head>
 
       <Header />
-      <PageHeader title="Ermittlungsverfahren: So verhalten Sie sich richtig" />
+
+      <PageHeader title="Ermittlungsverfahren" />
 
       <InformationenSubPageLayout>
-        <div className="prose max-w-none text-gray-800">
-          <h1 className="text-3xl font-extrabold mb-4">
-            Ablauf eines strafrechtlichen Ermittlungsverfahrens
-          </h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Ein Ermittlungsverfahren kann einschüchternd wirken. Es ist der
-            erste Schritt, den die Staatsanwaltschaft unternimmt, wenn der
-            Verdacht besteht, dass eine Straftat begangen wurde. Rechtsanwalt
-            Daniel Korff aus Berlin steht Ihnen in dieser Phase kompetent zur
-            Seite.
+        <div className="prose max-w-none text-lg text-gray-700">
+          <p className="font-semibold text-gray-900 mb-6">
+            Wenn Sie Kenntnis davon erhalten, dass gegen Sie ein
+            Ermittlungsverfahren geführt wird, ist schnelles und überlegtes
+            Handeln erforderlich. Der Ausgang des Verfahrens wird maßgeblich
+            durch Ihr Verhalten in der Frühphase beeinflusst.
+          </p>
+          <p>
+            Im Kern gilt die goldene Regel:{" "}
+            <strong>Machen Sie keine Aussage.</strong> Und zwar weder als
+            Beschuldigter, noch als Zeuge. Gerade die ersten Aussagen sind in
+            der Regel die Schlechtesten, denn es sind Laien-, sogenannte
+            &quot;Spontan-Aussagen&quot;.
+          </p>
+          <p>
+            Stattdessen sollten Sie umgehend einen Anwalt kontaktieren. Ein
+            Strafverteidiger kann Akteneinsicht beantragen und nur mit der
+            Kenntnis der Aktenlage kann eine sinnvolle Verteidigungsstrategie
+            erarbeitet werden. Ohne Aktenkenntnis ist jede Aussage, so gut sie
+            auch gemeint sein mag, ein Spiel mit dem Feuer.
           </p>
 
-          <h2 className="text-2xl font-bold mb-4 mt-8">
-            Der Beginn des Verfahrens
-          </h2>
-          <p className="mb-4">
-            Das Verfahren wird eingeleitet, sobald die Staatsanwaltschaft
-            Kenntnis von einem möglichen Delikt erhält. Dies geschieht in der
-            Regel durch eine Strafanzeige bei der Polizei oder
-            Staatsanwaltschaft. Es kann aber auch "von Amts wegen" durch eigene
-            Wahrnehmung der Behörden in die Wege geleitet werden. Die
-            Ermittlungen, wie Vernehmungen und Spurensicherung, werden meist von
-            der Polizei im Auftrag der Staatsanwaltschaft durchgeführt.
-          </p>
-
-          <p className="font-bold text-red-600">
-            Wichtiger Hinweis: Als Beschuldigter sind Sie nicht verpflichtet,
-            bei der Polizei zu erscheinen oder eine Aussage zu machen.
-          </p>
-
-          <h2 className="text-2xl font-bold mb-4 mt-8">
-            Mögliche Ausgänge des Verfahrens
-          </h2>
-          <p className="mb-4">
-            Nach Abschluss der Beweiserhebung entscheidet der Staatsanwalt über
-            den weiteren Weg. Das Verfahren kann auf verschiedene Weisen enden:
-          </p>
-          <ul className="list-disc pl-5 space-y-2 text-gray-700">
+          <h3 className="mt-8 text-xl font-bold text-gray-800">
+            Wichtige Grundsätze
+          </h3>
+          <ul className="list-disc list-inside space-y-2">
             <li>
-              <span className="font-bold">Einstellung des Verfahrens:</span>{" "}
-              Dies geschieht oft mangels hinreichenden Tatverdachts oder nach
-              dem Opportunitätsprinzip.
+              <strong>Keine Aussage machen:</strong> Weder bei der Polizei, noch
+              bei der Staatsanwaltschaft.
             </li>
             <li>
-              <span className="font-bold">Öffentliche Klage:</span> Wenn
-              ausreichender Tatverdacht besteht, erhebt die Staatsanwaltschaft
-              Klage, und es kommt zu einer Hauptverhandlung vor Gericht.
+              <strong>Rechtsbeistand hinzuziehen:</strong> Kontaktieren Sie
+              umgehend einen Rechtsanwalt für Strafrecht.
+            </li>
+            <li>
+              <strong>Aussageverweigerungsrecht:</strong> Machen Sie von Ihrem
+              Recht auf Aussageverweigerung Gebrauch.
             </li>
           </ul>
 
-          <h2 className="text-2xl font-bold mb-4 mt-8">
-            Grundregeln bei einem Ermittlungsverfahren
-          </h2>
-          <p className="mb-4">
-            Um Ihre Verteidigungschancen nicht zu gefährden, sollten Sie die
-            folgenden Grundregeln unbedingt beachten:
+          <p className="mt-8">
+            Ein Ermittlungsverfahren endet in der Regel mit einer Einstellung
+            (z.B. gemäß § 170 Abs. 2 StPO oder § 153a StPO) oder mit einer
+            Anklage vor Gericht. Eine frühzeitige Mandatierung kann oftmals
+            schon die Einstellung des Verfahrens im Vorfeld bewirken.
           </p>
-          <ul className="list-disc pl-5 space-y-2 text-gray-700">
-            <li>
-              Machen Sie von Ihrem{" "}
-              <span className="font-bold">Schweigerecht</span>
-              Gebrauch. Leisten Sie keine Aussage und führen Sie keine Gespräche
-              mit den ermittelnden Beamten.
-            </li>
-            <li>
-              <span className="font-bold">
-                Verweigern Sie aktive Mitwirkung
-              </span>
-              , zum Beispiel eine Schrift- oder Stimmprobe.
-            </li>
-            <li>
-              Nehmen Sie{" "}
-              <span className="font-bold">niemals ohne einen Anwalt</span> an
-              einer Vernehmung teil.
-            </li>
-            <li>
-              Bei einer <span className="font-bold">Festnahme</span>: Verlangen
-              Sie sofort, einen Anruf bei Ihrem Anwalt tätigen zu dürfen. Die
-              Polizei muss Ihnen hierbei helfen.
-            </li>
-            <li>
-              Denken Sie daran, dass Gespräche (z.B. Telefonate) abgehört und
-              Räumlichkeiten durchsucht werden könnten.
-            </li>
-          </ul>
 
-          <p className="mt-8 text-gray-600">
-            Bei Fragen oder im Notfall steht Ihnen Rechtsanwalt Daniel Korff in
-            Berlin gerne zur Seite. Zögern Sie nicht, Kontakt mit uns
-            aufzunehmen.
+          <p className="mt-8 font-semibold">
+            Nehmen Sie am besten unverzüglich{" "}
+            <Link
+              href="/kontakt"
+              className="text-red-600 hover:text-red-800 transition-colors"
+            >
+              Kontakt
+            </Link>{" "}
+            mit uns auf, um Ihre Rechte zu wahren.
           </p>
         </div>
       </InformationenSubPageLayout>
