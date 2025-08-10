@@ -1,0 +1,78 @@
+{
+  "common": {
+    "changeLanguage": "Zmień język",
+    "nav": {
+      "kanzlei": "Kancelaria",
+      "strafrecht": "Prawo karne",
+      "informationen": "Informacje",
+      "kontakt": "Kontakt/Pogotowie",
+      "downloads": "Pliki do pobrania",
+      "ermittlungsverfahren": "Postępowanie przygotowawcze",
+      "geldstrafe": "Grzywna",
+      "hausdurchsuchung": "Przeszukanie",
+      "strafbefehl": "Nakaz karny",
+      "untersuchungshaft": "Areszt tymczasowy",
+      "vorladung": "Wezwanie",
+      "anfahrt": "Dojazd",
+      "datenschutz": "Prywatność",
+      "impressum": "Imprint"
+    },
+    "footer": {
+      "copyright": "Daniel Korff - Kancelaria prawa karnego"
+    },
+    "phone": {
+      "appointments": "Terminy:",
+      "number": "030 - 85479867"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Twoi kompetentni obrońcy w Berlinie",
+      "subtitle": "W każdej sytuacji stoimy po Twojej stronie."
+    },
+    "cta": {
+      "appointments": "Umów wizytę",
+      "email": "Wyślij e-mail",
+      "openingHours": "Godziny otwarcia",
+      "openingHoursValue": "PN-PT: 09-17"
+    },
+    "services": {
+      "title": "Nasze specjalizacje",
+      "subtitle": "Oferujemy specjalistyczne doradztwo prawne i reprezentację.",
+      "learnMore": "Dowiedz się więcej",
+      "items": {
+        "strafrecht_title": "Prawo karne",
+        "strafrecht_desc": "Bronimy Twoich praw na każdym etapie postępowania karnego i wspieramy Cię we wszystkich sprawach karnych.",
+        "informationen_title": "Informacje",
+        "informationen_desc": "Poznaj przebieg postępowania karnego, swoje prawa jako podejrzany lub ofiara oraz ważne terminy.",
+        "kontakt_title": "Kontakt i pogotowie",
+        "kontakt_desc": "Szybka pomoc w nagłych wypadkach lub umówienie konsultacji — jesteśmy do dyspozycji."
+      }
+    },
+    "about": {
+      "title": "Kanzlei Korff: Twój prawnik w Berlinie",
+      "paragraph1": "Jako doświadczona kancelaria w Berlin-Mitte zapewniamy rzetelne doradztwo prawne i zdecydowaną reprezentację interesów. Koncentrujemy się na obronie karnej i ochronie praw naszych klientów. Rozumiemy pilność i wrażliwość Twojej sytuacji i oferujemy kompetentne wsparcie na każdym etapie postępowania.",
+      "cta": "Więcej o nas"
+    }
+  },
+  "pageHeader": {
+    "banner": "Daniel Korff - Kancelaria prawa karnego - w Berlinie i w całych Niemczech"
+  },
+  "contact": {
+    "title": "Kontakt i pogotowie",
+    "headline": "Skontaktuj się z nami",
+    "intro": "Jesteśmy tutaj, aby odpowiedzieć na Twoje pytania i wesprzeć Cię w sprawach prawnych.",
+    "address": "Kanzlei Korff",
+    "phoneFax": "Telefon i faks",
+    "email": "E-mail",
+    "route": "Dojazd",
+    "routeInfo": "Komunikacja publiczna i parking w pobliżu.",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "message": "Wiadomość",
+      "send": "Wyślij"
+    }
+  }
+}

@@ -3,26 +3,19 @@ import Head from "next/head";
 import Link from "next/link";
 
 // Globale Komponenten
-import Header from "../../../components/Header/Header";
 import PageHeader from "../../../components/PageHeader/PageHeader";
-import Footer from "../../../components/Footer/Footer";
 import ContactSection from "../../../components/ContactSection/ContactSection";
 
 // Die neue Layout-Komponente für Unterseiten
 import StrafrechtSubPageLayout from "../../../components/StrafrechtSubPageLayout/StrafrechtSubPageLayout";
 
-const SexualstrafrechtPage = () => {
+const SexualstrafrechtIndexPage = () => {
   return (
     <>
       <Head>
         <title>Sexualstrafrecht | Kanzlei Korff</title>
-        <meta
-          name="description"
-          content="Spezialisierte Verteidigung im Sexualstrafrecht. Absolute Diskretion und professionelle Beratung bei sensiblen Vorwürfen."
-        />
+        <meta name="description" content="Überblick über das Sexualstrafrecht." />
       </Head>
-
-      <Header />
 
       <PageHeader title="Sexualstrafrecht" />
 
@@ -109,9 +102,8 @@ const SexualstrafrechtPage = () => {
       </StrafrechtSubPageLayout>
 
       <ContactSection />
-      <Footer />
     </>
   );
 };
 
-export default SexualstrafrechtPage;
+export default SexualstrafrechtIndexPage;

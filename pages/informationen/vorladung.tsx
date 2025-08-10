@@ -2,28 +2,19 @@ import React from "react";
 import Head from "next/head";
 
 // Globale Komponenten
-import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
-
-// Die Layout-Komponente für Unterseiten wird korrekt importiert
 import InformationenSubPageLayout from "../../components/InformationenSubPageLayout/InformationenSubPageLayout";
 
-// Die Komponente für die Vorladung-Seite
 const VorladungPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Vorladung als Beschuldigter | Kanzlei Korff</title>
-        <meta
-          name="description"
-          content="Sie haben eine Vorladung erhalten? Erfahren Sie, welche Rechte Sie als Beschuldigter haben und wie Rechtsanwalt Korff Sie verteidigt."
-        />
+        <title>Vorladung | Kanzlei Korff</title>
+        <meta name="description" content="Was tun bei einer polizeilichen Vorladung?" />
       </Head>
 
-      <Header />
-      <PageHeader title="Vorladung: Was zu tun ist" />
+      <PageHeader title="Polizeiliche Vorladung" />
 
       <InformationenSubPageLayout>
         <div className="prose max-w-none text-gray-800">
@@ -98,7 +89,6 @@ const VorladungPage: React.FC = () => {
       </InformationenSubPageLayout>
 
       <ContactSection />
-      <Footer />
     </>
   );
 };

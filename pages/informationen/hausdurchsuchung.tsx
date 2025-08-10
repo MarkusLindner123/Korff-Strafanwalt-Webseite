@@ -3,9 +3,7 @@ import Head from "next/head";
 
 
 // Globale Komponenten
-import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
 // Die Layout-Komponente für Unterseiten wird korrekt importiert
@@ -23,7 +21,6 @@ const HausdurchsuchungPage: React.FC = () => {
         />
       </Head>
 
-      <Header />
       <PageHeader title="Hausdurchsuchung: Ihre Rechte und Pflichten" />
 
       <InformationenSubPageLayout>
@@ -85,7 +82,6 @@ const HausdurchsuchungPage: React.FC = () => {
       </InformationenSubPageLayout>
 
       <ContactSection />
-      <Footer />
     </>
   );
 };

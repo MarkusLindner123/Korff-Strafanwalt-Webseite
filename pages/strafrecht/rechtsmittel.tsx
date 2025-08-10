@@ -1,11 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 
 // Globale Komponenten
-import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader/PageHeader";
-import Footer from "../../components/Footer/Footer";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
 // Die neue Layout-Komponente für Unterseiten
@@ -16,13 +13,8 @@ const RechtsmittelPage = () => {
     <>
       <Head>
         <title>Rechtsmittelverteidigung | Kanzlei Korff</title>
-        <meta
-          name="description"
-          content="Spezialisierte Verteidigung in der Rechtsmittelinstanz (Berufung und Revision). Wir prüfen Ihr Urteil und kämpfen für Ihre Rechte."
-        />
+        <meta name="description" content="Berufung, Revision und weitere Rechtsmittel." />
       </Head>
-
-      <Header />
 
       <PageHeader title="Rechtsmittelverteidigung" />
 
@@ -67,19 +59,18 @@ const RechtsmittelPage = () => {
 
           <p className="mt-8 font-semibold">
             Sollten Sie mit einem Urteil unzufrieden sein, nehmen Sie einfach{" "}
-            <Link
+            <a
               href="/kontakt"
               className="text-red-600 hover:text-red-800 transition-colors"
             >
               Kontakt
-            </Link>{" "}
+            </a>{" "}
             mit uns auf, um eine fristgerechte Prüfung zu gewährleisten.
           </p>
         </div>
       </StrafrechtSubPageLayout>
 
       <ContactSection />
-      <Footer />
     </>
   );
 };
