@@ -1,18 +1,19 @@
 import React from "react";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+const basePath = publicRuntimeConfig.basePath || "";
 
 const HeroSection = () => {
   return (
     <>
-      {/* Hero-Sektion mit Hintergrundbild und Text */}
-      {/* Die Schriftart wird über die Klasse 'font-sans' aus der globals.css angewendet */}
+      {/* Hero-Sektion mit Hintergrundbild */}
       <div
         className="font-sans relative h-[60vh] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: "url('images/hero-bg.jpg')" }}
+        style={{ backgroundImage: `url('${basePath}/images/hero-bg.jpg')` }}
       >
-        {/* Overlay für bessere Lesbarkeit des Textes */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
-        {/* Inhalt der Hero-Sektion */}
         <div className="relative z-10 text-white p-8">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Ihre kompetenten Strafverteidiger in Berlin
@@ -23,14 +24,13 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Neuer horizontaler Balken mit drei Einträgen */}
-      {/* Der Hintergrund des Balkens verwendet nun die CSS-Variable --korff-secondary */}
+      {/* Infobalken */}
       <div className="bg-[var(--korff-secondary)] text-white py-8 px-4 shadow-xl">
         <div className="container mx-auto flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-8">
-          {/* Eintrag 1: Termine vereinbaren */}
+          {/* Termine */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
             <img
-              src="images/calender-icon.svg"
+              src={`${basePath}/images/calender-icon.svg`}
               alt="Kalender-Icon"
               className="h-10 w-10 mb-2 md:mb-0"
             />
@@ -45,10 +45,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Eintrag 2: E-Mail senden */}
+          {/* E-Mail */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
             <img
-              src="images/mail-icon.svg"
+              src={`${basePath}/images/mail-icon.svg`}
               alt="Mail-Icon"
               className="h-10 w-10 mb-2 md:mb-0"
             />
@@ -63,10 +63,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Eintrag 3: Öffnungszeiten */}
+          {/* Öffnungszeiten */}
           <div className="flex flex-col items-center text-center md:flex-row md:space-x-4">
             <img
-              src="images/clock-icon.svg"
+              src={`${basePath}/images/clock-icon.svg`}
               alt="Uhr-Icon"
               className="h-10 w-10 mb-2 md:mb-0"
             />
